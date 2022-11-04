@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{algorithm2e}
+
+\begin{document}
+	\begin{algorithm}
+		\KwData{A set $C = \{c_1,c_2,\ldots,c_r\}$ of denominations of coins, where $c_i > c_2 > \ldots > c_r$ and a positive number $n$}
+		\KwResult{A list of coins $d_1,d_2,\ldots,d_k,$ such that $ \sum_{i=1}^{k} d_i = n$ and $k$ is minimized}
+		$C \leftarrow \emptyset;$
+		
+		\For{$i \leftarrow 1$ to $r$}{
+			\While{$n \geq c_i$}{
+				$C \leftarrow C \cap \{c_i\};$
+				
+				$n \leftarrow n - c_i;$
+			}
+		}
+		\Return{C;}
+		\caption{\textsc{Change} Makes change using the smallest number of coins}
+	\end{algorithm}
+	
+	\begin{algorithm}
+		\KwData{A sequence of integers ($a_1,a_2,\ldots,a_n$)}
+		\KwResult{The index of first location with the same value as in a previous location in the sequence}
+		$location \leftarrow 0;$
+		
+		$i \leftarrow 2;$
+		
+		\While{$i \leq n$ and $location = 0$}
+		{
+			\tcc*{Do the following if $i$ is less than or equal to $n$}
+			$j \leftarrow 1;$
+			
+			\While{$j < i$ and $location = 0$}{
+				\If{$a_i = a_j$}{
+					$location \leftarrow i;$	
+				}
+				\Else{
+					$j \leftarrow j + 1;$
+				}
+			}
+			$i \leftarrow i + 1;$
+		}
+		\Return{location;}
+		\caption{\textsc{FindDuplicate}}
+	\end{algorithm}
+\end{document}
