@@ -1,96 +1,78 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-#define MAX 10
 
-//code not completed
 typedef struct
 {
-    int a[MAX],front,rear;
-}queue;
+    int *queue;
+    int front,rear;
+} Queue;
 
-int isempty(queue *ptr)
+void enqueue(Queue * q,int x)
 {
-    if(ptr->front==ptr->rear)
+    if (q->front == -1&&q->rear == -1)
     {
-        return 1;
+        q->front = 0;
     }
+    q->queue[++(q->rear)] = x;
+}
+
+int isempty(Queue *q)
+{
+    if ((q->front == -1 && q->rear==-1) || (q->front > q->rear))
+        return 1;
     return 0;
 }
 
-void insr(queue *ptr,int item)
+int dequeue(Queue * q)
 {
-    if(ptr->front==-1&&ptr->rear==-1)
+    if(isempty(q))
     {
-        ptr->front=0;
-    }
-    if(ptr->rear==MAX-1)
-    {
-        printf("Queue Full \n");
+        printf("\nEmpty Queue\n");
+        return -1;
     }
     else
     {
-        (ptr->rear)++;
-        ptr->a[ptr->rear]=item;
-    }    
-}
-int delf(queue *ptr)
-{
-    if(isempty(ptr))
-    {
-        printf("Queue Empty \n");
-        exit(1);
-    }
-    else
-    {
-        int x=ptr->a[ptr->front];
-        for(int i=ptr->front;i<ptr->rear;i++)
-        {
-            ptr->a[i]=ptr->a[i+1];
-        }
-        (ptr->front)--;
-        (ptr->rear)--;
+        int x = q->queue[q->front];
+        int i,ind=q->front;
+        for(i=q->front+1;i<=q->rear;i++) 
+            q->queue[ind++] = q->queue[i];
+        q->rear--;
         return x;
     }
 }
 
-void display(queue *ptr)
+int main()
 {
-    for(int i=ptr->front;i<=ptr->rear;i++)
-    {
-        printf("%d ",ptr->a[i]);
-    }
-    printf("\n");
-}
+    int n,i,j,t;
+    printf("Enter Size of Queue : \t");
+    scanf("%d",&n);
+    Queue q;
+    q.rear = -1;
+    q.front = -1;
+    q.queue = (int *) malloc(n * sizeof(int));
 
-void main()
-{
-    queue q1,*ptr=&q1;
-    ptr->front=-1;
-    ptr->rear=-1;
-    int arr[MAX],ele;
-    for(int i=0;i<MAX;i++)
+    for(i=0;i<n;i++)
     {
-        printf("Enter Element to insert : \t");
-        scanf("%d",&ele);
-        insr(ptr,ele);
+        printf("\nEnter Element %d to insert into Queue : \t",i+1);
+        scanf("%d",&t);
+        enqueue(&q,t);
     }
-    printf("Initial Queue Elements \n");
-    display(ptr);
-    int i=0;
-    while(i<MAX)
+
+    printf("\nInitial Queue\n");
+    for(i=0;i<n;i++) 
+        printf("%d ",q.queue[i]);
+
+    for(i=0;i<n;i++)
     {
-        int x = delf(ptr);
-        arr[i]=x;
-        i++;
+        for(j=0;j<n-1-i;j++)
+        {
+            t = dequeue(&q);
+            enqueue(&q,t);
+        }
+        q.front=i+1;
     }
-    i=MAX-1;
-    while(i>=0)
-    {
-        int x = arr[i];
-        insr(ptr,x);
-        i--;
-    }
-    printf("\nFinal Queue Elements \n");
-    display(ptr);
+
+    printf("\n\nReversed Queue \n");
+    for(i=0;i<n;i++) 
+        printf("%d ",q.queue[i]);
 }
