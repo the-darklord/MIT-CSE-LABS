@@ -1,0 +1,7 @@
+git config user.mail "saimihirnath.nayakanti1@gmail.com"
+git config user.name "the-darklord"
+git status
+git add <filename>
+git commit -m "<your commit>"
+git push origin master/main
+git pull origin master/main

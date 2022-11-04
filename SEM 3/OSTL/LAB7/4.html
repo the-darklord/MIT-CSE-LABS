@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>Bouncing Ball</title>
+</head>
+<body>
+    <canvas id="canvas" width="1280" height="720" style="border:5px solid blue;"></canvas>
+    <script lang="javascript">
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        var p = { x: 25, y: 25 };
+        var velo = 3,
+            corner = 50,
+            rad = 20;
+        var ball = { x: p.x, y: p.y };
+        var moveX = Math.cos(Math.PI / 180 * corner) * velo;
+        var moveY = Math.sin(Math.PI / 180 * corner) * velo;
+
+        function DrawMe() {
+            ctx.clearRect(0, 0, 1280, 720);
+
+            if (ball.x > canvas.width - rad || ball.x < rad) moveX = -moveX;
+            if (ball.y > canvas.height - rad || ball.y < rad) moveY = -moveY;
+
+            ball.x += moveX;
+            ball.y += moveY;
+
+            ctx.beginPath();
+            ctx.fillStyle = 'red';
+            ctx.arc(ball.x, ball.y, rad, 0, Math.PI * 2, false);
+            ctx.fill();
+            ctx.closePath();
+        }
+        setInterval(DrawMe, 10);
+    </script>
+</body>
+</html>

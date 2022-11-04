@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    Real Time Clock
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<script language="javascript">
+    function message()
+    {
+        setTimeout(function()
+        {
+            const d = new Date();
+            const n = d.toLocaleTimeString();
+            document.getElementById("clock").innerHTML=n;
+            myclock();
+        }, 1000)
+        const d = new Date();
+        var name = "Mihir";
+        var hh=d.getHours();
+        var greeting;
+        if(hh>0&&hh<11)
+        {
+            greeting="Good Morning ";
+        }
+        else if(hh>11&&hh<16)
+        {
+            greeting="Good Afternoon ";
+        }
+        else if(hh>16&&hh<21)
+        {
+            greeting="Good Evening ";
+        }
+        else
+        {
+            greeting = "Good Night ";
+        }
+        alert("Hello "+greeting + name);
+    }
+    message();
+</script>
+<div id="clock"></div>
+</body>
+</html>

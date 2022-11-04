@@ -1,0 +1,83 @@
+$date
+	Wed Sep 21 22:27:44 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module q_tb $end
+$var wire 1 ! altb $end
+$var wire 1 " agtb $end
+$var wire 1 # aeqb $end
+$var reg 4 $ a [3:0] $end
+$var reg 4 % b [3:0] $end
+$scope module comp4 $end
+$var wire 4 & a [3:0] $end
+$var wire 1 # aeqb $end
+$var wire 1 " agtb $end
+$var wire 1 ! altb $end
+$var wire 4 ' b [3:0] $end
+$var wire 1 ( c6 $end
+$var wire 1 ) c5 $end
+$var wire 1 * c4 $end
+$var wire 1 + c3 $end
+$var wire 1 , c2 $end
+$var wire 1 - c1 $end
+$scope module stage0 $end
+$var wire 2 . a [1:0] $end
+$var wire 1 - aeqb $end
+$var wire 1 , agtb $end
+$var wire 1 + altb $end
+$var wire 2 / b [1:0] $end
+$upscope $end
+$scope module stage1 $end
+$var wire 2 0 a [1:0] $end
+$var wire 1 * aeqb $end
+$var wire 1 ) agtb $end
+$var wire 1 ( altb $end
+$var wire 2 1 b [1:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 1
+b10 0
+b10 /
+b10 .
+1-
+0,
+0+
+0*
+1)
+0(
+b1001 '
+b1010 &
+b1001 %
+b1010 $
+0#
+1"
+0!
+$end
+#20
+0"
+1#
+1*
+0)
+b10 1
+b1010 %
+b1010 '
+#40
+1!
+1(
+0"
+0#
+0*
+0)
+b1 0
+b1001 $
+b1001 &
+#60

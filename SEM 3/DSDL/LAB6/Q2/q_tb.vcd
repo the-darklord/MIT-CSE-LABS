@@ -1,0 +1,283 @@
+$date
+	Thu Oct  6 10:20:33 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module q_tb $end
+$var wire 1 ! f $end
+$var reg 16 " i [15:0] $end
+$var reg 4 # s [3:0] $end
+$scope module f6 $end
+$var wire 16 $ i [15:0] $end
+$var wire 4 % s [3:0] $end
+$var wire 1 ! f $end
+$var wire 4 & c [3:0] $end
+$scope module f0 $end
+$var wire 4 ' i [3:0] $end
+$var wire 2 ( s [1:0] $end
+$var reg 1 ) f $end
+$upscope $end
+$scope module f1 $end
+$var wire 4 * i [3:0] $end
+$var wire 2 + s [1:0] $end
+$var reg 1 , f $end
+$upscope $end
+$scope module f2 $end
+$var wire 4 - i [3:0] $end
+$var wire 2 . s [1:0] $end
+$var reg 1 / f $end
+$upscope $end
+$scope module f3 $end
+$var wire 4 0 i [3:0] $end
+$var wire 2 1 s [1:0] $end
+$var reg 1 2 f $end
+$upscope $end
+$scope module f4 $end
+$var wire 4 3 i [3:0] $end
+$var wire 2 4 s [1:0] $end
+$var reg 1 ! f $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 4
+b0 3
+02
+b0 1
+b1010 0
+0/
+b0 .
+b1010 -
+0,
+b0 +
+b1010 *
+0)
+b0 (
+b1010 '
+b0 &
+b0 %
+b1010101010101010 $
+b0 #
+b1010101010101010 "
+0!
+$end
+#20
+1!
+1)
+1,
+1/
+b1111 &
+b1111 3
+12
+b1 (
+b1 +
+b1 .
+b1 1
+b1 #
+b1 %
+#40
+0!
+0)
+0,
+0/
+b0 &
+b0 3
+02
+b10 (
+b10 +
+b10 .
+b10 1
+b10 #
+b10 %
+#60
+1!
+1)
+1,
+1/
+b1111 &
+b1111 3
+12
+b11 (
+b11 +
+b11 .
+b11 1
+b11 #
+b11 %
+#80
+0!
+0)
+0,
+0/
+b0 &
+b0 3
+02
+b0 (
+b0 +
+b0 .
+b0 1
+b1 4
+b100 #
+b100 %
+#100
+1!
+1)
+1,
+1/
+b1111 &
+b1111 3
+12
+b1 (
+b1 +
+b1 .
+b1 1
+b101 #
+b101 %
+#120
+0!
+0)
+0,
+0/
+b0 &
+b0 3
+02
+b10 (
+b10 +
+b10 .
+b10 1
+b110 #
+b110 %
+#140
+1!
+1)
+1,
+1/
+b1111 &
+b1111 3
+12
+b11 (
+b11 +
+b11 .
+b11 1
+b111 #
+b111 %
+#160
+0!
+0)
+0,
+0/
+b0 &
+b0 3
+02
+b0 (
+b0 +
+b0 .
+b0 1
+b10 4
+b1000 #
+b1000 %
+#180
+1!
+1)
+1,
+1/
+b1111 &
+b1111 3
+12
+b1 (
+b1 +
+b1 .
+b1 1
+b1001 #
+b1001 %
+#200
+0!
+0)
+0,
+0/
+b0 &
+b0 3
+02
+b10 (
+b10 +
+b10 .
+b10 1
+b1010 #
+b1010 %
+#220
+1!
+1)
+1,
+1/
+b1111 &
+b1111 3
+12
+b11 (
+b11 +
+b11 .
+b11 1
+b1011 #
+b1011 %
+#240
+0!
+0)
+0,
+0/
+b0 &
+b0 3
+02
+b0 (
+b0 +
+b0 .
+b0 1
+b11 4
+b1100 #
+b1100 %
+#260
+1!
+1)
+1,
+1/
+b1111 &
+b1111 3
+12
+b1 (
+b1 +
+b1 .
+b1 1
+b1101 #
+b1101 %
+#280
+0!
+0)
+0,
+0/
+b0 &
+b0 3
+02
+b10 (
+b10 +
+b10 .
+b10 1
+b1110 #
+b1110 %
+#300
+1!
+1)
+1,
+1/
+b1111 &
+b1111 3
+12
+b11 (
+b11 +
+b11 .
+b11 1
+b1111 #
+b1111 %
+#320

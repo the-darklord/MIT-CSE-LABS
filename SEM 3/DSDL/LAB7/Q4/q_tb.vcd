@@ -1,0 +1,81 @@
+$date
+	Thu Oct 20 09:06:08 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module q_tb $end
+$var wire 4 ! e [3:0] $end
+$var reg 4 " b [3:0] $end
+$scope module f1 $end
+$var wire 4 # b [3:0] $end
+$var wire 1 $ c $end
+$var wire 4 % e [3:0] $end
+$scope module stage0 $end
+$var wire 4 & i [3:0] $end
+$var wire 2 ' s [1:0] $end
+$var reg 1 ( f $end
+$upscope $end
+$scope module stage1 $end
+$var wire 4 ) i [3:0] $end
+$var wire 2 * s [1:0] $end
+$var reg 1 + f $end
+$upscope $end
+$scope module stage2 $end
+$var wire 4 , i [3:0] $end
+$var wire 2 - s [1:0] $end
+$var reg 1 . f $end
+$upscope $end
+$scope module stage3 $end
+$var wire 4 / i [3:0] $end
+$var wire 2 0 s [1:0] $end
+$var reg 1 1 f $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+01
+b10 0
+b0 /
+0.
+b10 -
+b1010 ,
+1+
+b10 *
+b110 )
+1(
+b10 '
+b1100 &
+b1100 %
+0$
+b1000 #
+b1000 "
+b1100 !
+$end
+#20
+b1101 !
+b1101 %
+11
+b1111 /
+1$
+b1001 "
+b1001 #
+#40
+0(
+0+
+b11 !
+b11 %
+1.
+b0 '
+b0 *
+b101 ,
+b0 -
+b0 0
+b10 "
+b10 #
+#60

@@ -1,0 +1,223 @@
+$date
+	Sun Sep 18 17:36:10 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module qb_tb $end
+$var wire 4 ! s3 [3:0] $end
+$var wire 1 " cout $end
+$var reg 1 # cin $end
+$var reg 4 $ x2 [3:0] $end
+$var reg 4 % y2 [3:0] $end
+$scope module bcd $end
+$var wire 1 & c2 $end
+$var wire 1 # cin $end
+$var wire 1 " cout $end
+$var wire 1 ' h1 $end
+$var wire 1 ( h2 $end
+$var wire 4 ) x2 [3:0] $end
+$var wire 4 * y2 [3:0] $end
+$var wire 4 + s3 [3:0] $end
+$var wire 4 , s2 [3:0] $end
+$var wire 1 - c4 $end
+$var wire 4 . c3 [3:0] $end
+$var wire 1 / c1 $end
+$scope module a0 $end
+$var wire 1 # carryin $end
+$var wire 4 0 x [3:0] $end
+$var wire 4 1 y [3:0] $end
+$var wire 4 2 s [3:0] $end
+$var wire 1 / carryout $end
+$var wire 4 3 c [3:0] $end
+$var wire 4 4 Y [3:0] $end
+$scope module stage0 $end
+$var wire 1 # Cin $end
+$var wire 1 5 Cout $end
+$var wire 1 6 s1 $end
+$var wire 1 7 x1 $end
+$var wire 1 8 y1 $end
+$upscope $end
+$scope module stage1 $end
+$var wire 1 9 Cin $end
+$var wire 1 : Cout $end
+$var wire 1 ; s1 $end
+$var wire 1 < x1 $end
+$var wire 1 = y1 $end
+$upscope $end
+$scope module stage2 $end
+$var wire 1 > Cin $end
+$var wire 1 ? Cout $end
+$var wire 1 @ s1 $end
+$var wire 1 A x1 $end
+$var wire 1 B y1 $end
+$upscope $end
+$scope module stage3 $end
+$var wire 1 C Cin $end
+$var wire 1 / Cout $end
+$var wire 1 D s1 $end
+$var wire 1 E x1 $end
+$var wire 1 F y1 $end
+$upscope $end
+$upscope $end
+$scope module a1 $end
+$var wire 1 # carryin $end
+$var wire 4 G x [3:0] $end
+$var wire 4 H y [3:0] $end
+$var wire 4 I s [3:0] $end
+$var wire 1 - carryout $end
+$var wire 4 J c [3:0] $end
+$var wire 4 K Y [3:0] $end
+$scope module stage0 $end
+$var wire 1 # Cin $end
+$var wire 1 L Cout $end
+$var wire 1 M s1 $end
+$var wire 1 N x1 $end
+$var wire 1 O y1 $end
+$upscope $end
+$scope module stage1 $end
+$var wire 1 P Cin $end
+$var wire 1 Q Cout $end
+$var wire 1 R s1 $end
+$var wire 1 S x1 $end
+$var wire 1 T y1 $end
+$upscope $end
+$scope module stage2 $end
+$var wire 1 U Cin $end
+$var wire 1 V Cout $end
+$var wire 1 W s1 $end
+$var wire 1 X x1 $end
+$var wire 1 Y y1 $end
+$upscope $end
+$scope module stage3 $end
+$var wire 1 Z Cin $end
+$var wire 1 - Cout $end
+$var wire 1 [ s1 $end
+$var wire 1 \ x1 $end
+$var wire 1 ] y1 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0]
+1\
+1[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+0N
+0M
+0L
+b0 K
+b0z J
+b1000 I
+b0 H
+b1000 G
+0F
+0E
+1D
+1C
+1B
+0A
+0@
+1?
+1>
+0=
+1<
+0;
+1:
+19
+18
+17
+06
+15
+b101 4
+b111z 3
+b1000 2
+b101 1
+b11 0
+0/
+b0 .
+0-
+b1000 ,
+b1000 +
+b101 *
+b11 )
+0(
+0'
+0&
+b101 %
+b11 $
+0#
+0"
+b1000 !
+$end
+#20
+0W
+0U
+0Z
+0Q
+b0z J
+0V
+0[
+0T
+0Y
+1M
+0X
+0\
+b0 K
+09
+0@
+0D
+1N
+05
+0C
+b11 !
+b11 +
+b11 I
+1R
+0"
+b0 .
+b0 H
+0&
+16
+0?
+0(
+0>
+1S
+b0z 3
+0:
+08
+1=
+0B
+b11 ,
+b11 2
+b11 G
+1;
+b10 4
+0<
+b10 %
+b10 *
+b10 1
+b1 $
+b1 )
+b1 0
+#40

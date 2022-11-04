@@ -1,0 +1,27 @@
+body
+{
+    margin:0;
+    background: #000;
+}
+canvas
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;  
+}
+h1
+{
+    color: crimson;
+}
+h2
+{
+    color:darkorange;
+}
+head
+{
+    color:deeppink;
+}
+div
+{
+    color:maroon;
+}
