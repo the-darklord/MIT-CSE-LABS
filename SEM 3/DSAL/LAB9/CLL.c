@@ -54,35 +54,6 @@ Nodeptr InsertLast(Nodeptr first,int item)
     }
 }
 
-Nodeptr sortlist(Nodeptr first)
-{
-    Nodeptr temp=first,rear;
-    int x;
-    if(isEmpty(temp))
-    {
-        return NULL;
-    }
-    else
-    {
-        while(temp!=first)
-        {
-            rear=temp->next;
-            while(rear!=temp->next)
-            {
-                if(temp->data > rear->data)
-                {
-                    x=temp->data;
-                    temp->data=rear->data;
-                    rear->data=x;
-                }
-                rear=rear->next;
-            }
-            temp=temp->next;
-        }
-    }
-    return first;
-}
-
 void Display(Nodeptr first)
 {
     Nodeptr temp;
