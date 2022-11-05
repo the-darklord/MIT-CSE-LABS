@@ -30,15 +30,6 @@ int isEmpty(Nodeptr list)
    return 0;
 }
 
-Nodeptr InsertFront(Nodeptr first,int item)
-{
-    Nodeptr temp;
-    temp = getnode();
-    temp->data=item;
-    temp->next=first;
-    return temp;
-}
-
 Nodeptr InsertLast(Nodeptr first,int item)
 {
     Nodeptr temp,rear;
@@ -79,67 +70,6 @@ int DeleteFront(Nodeptr *first)
         free(temp);
         return x;
     }
-}
-
-int DeleteLast(Nodeptr *first)
-{
-    Nodeptr prev,temp;
-    int x;
-    if(isEmpty(*first))
-    {
-        printf("Empty List");
-        return -1;
-    }
-    else
-    {
-        prev=NULL;
-        temp = *first;
-        while(temp->next)
-        {
-            prev=temp;
-            temp=temp->next;
-        }
-        x = temp->data;
-        if(isEmpty(prev))
-        {
-            *first = NULL;
-        }
-        else
-        {
-            prev->next = NULL;
-        }
-        free(temp);
-        return x;
-    }
-}
-
-Nodeptr sortlist(Nodeptr first)
-{
-    Nodeptr temp=first,rear;
-    int x;
-    if(isEmpty(temp))
-    {
-        return NULL;
-    }
-    else
-    {
-        while(temp)
-        {
-            rear=temp->next;
-            while(rear)
-            {
-                if(temp->data > rear->data)
-                {
-                    x=temp->data;
-                    temp->data=rear->data;
-                    rear->data=x;
-                }
-                rear=rear->next;
-            }
-            temp=temp->next;
-        }
-    }
-    return first;
 }
 
 void DeleteKey(Nodeptr *first, int key) 
