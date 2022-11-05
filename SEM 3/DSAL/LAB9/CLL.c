@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//code not complete
 typedef struct node *Nodeptr;
+
 struct node
 {
     char data;
@@ -37,9 +37,11 @@ Nodeptr InsertLast(Nodeptr first,int item)
     temp=getnode();
     temp->data = item;
     rear=first;
+    temp->next = first;
     if(isEmpty(first))
     {
-        first = temp;
+        temp->next=temp;
+        return temp;
     }
     else
     {
@@ -48,9 +50,8 @@ Nodeptr InsertLast(Nodeptr first,int item)
             rear=rear->next;
         }
         rear->next=temp;
-        temp->next = first;
+        return first;
     }
-    return first;
 }
 
 Nodeptr sortlist(Nodeptr first)
@@ -97,6 +98,6 @@ void Display(Nodeptr first)
             printf("%c\t",temp->data);
             temp=temp->next;
         }
-        printf("%d\n",temp->data);
+        printf("%c\n",temp->data);
     }
 }
