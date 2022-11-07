@@ -18,14 +18,13 @@ class Stack<T>
     }
     T pop()
     {
-        return arr.get(tos--);
+        return arr.remove(tos--);
     }
     void Display()
     {
         for(int i=0;i<=tos;i++){
             System.out.println(arr.get(i).toString());
         }
-        System.out.println();
     }
 }
 
@@ -72,10 +71,14 @@ class q2
         int size = sc.nextInt();
         Stack<Student> s1 = new Stack<>(size);
         Stack<Employee> s2 = new Stack<>(size);
-        Student ss=new Student("Mihir", 368, 9);
-        Employee ee = new Employee("TDL", 57);
-        s1.push(ss);
-        s2.push(ee);
+        Student ss1=new Student("Mihir", 368, 9);
+        Employee ee1 = new Employee("TDL", 57);
+        Student ss2=new Student("Mahi", 252, 8);
+        Employee ee2 = new Employee("Hruthik", 27);
+        s1.push(ss1);
+        s1.push(ss2);
+        s2.push(ee1);
+        s2.push(ee2);
         s1.Display();
         s2.Display();
     }
