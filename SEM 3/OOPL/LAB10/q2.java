@@ -1,11 +1,12 @@
 import java.util.*;
 import java.lang.*;
-// code not completed
+
 class Stack<T>
 {
     ArrayList<T> arr;
     int tos=-1;
     int size;
+    T x;
     Stack(int size)
     {
         this.size=size;
@@ -13,12 +14,28 @@ class Stack<T>
     }
     void push(T ele)
     {
-        arr.add(ele);
-        tos++;
+        if(tos==size-1)
+            {
+                System.out.println("Can't Push");
+                return ;
+            }
+        else
+            {
+                arr.add(ele);
+                tos++;
+            }
     }
     T pop()
     {
-        return arr.remove(tos--);
+        if(tos==-1)
+            {
+                System.out.println("Can't Pop");
+                return x;
+            }
+        else
+            {
+                return arr.remove(tos--);
+            }
     }
     void Display()
     {
