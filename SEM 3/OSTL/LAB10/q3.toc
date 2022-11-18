@@ -1,3 +1,0 @@
-\beamer@sectionintoc {1}{ANAKIN SKYWALKER}{2}{0}{1}
-\beamer@subsectionintoc {1}{1}{DARTH VADER}{2}{0}{1}
-\beamer@sectionintoc {2}{LUKE SKYWALKER}{4}{0}{2}
