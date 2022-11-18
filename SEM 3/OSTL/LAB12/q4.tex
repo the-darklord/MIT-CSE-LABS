@@ -1,5 +1,40 @@
-\documentclass{IEEETran}
+\documentclass{IEEEtran}
+\usepackage{algorithm2e}
+\usepackage{graphicx}
 
 \begin{document}
-	
+	\bibliographystyle{plain}
+	\bibliography{q}
+	\nocite{*}
+	\vspace{2cm}
+	Pythagoras Theorem : $a^2 + b^2 = c^2$
+	\vspace{2cm}
+	\begin{algorithm}
+		\KwData{A set $C = \{c_1,c_2,\ldots,c_r\}$ of denominations of coins, where $c_i > c_2 > \ldots > c_r$ and a positive number $n$}
+		\KwResult{A list of coins $d_1,d_2,\ldots,d_k,$ such that $ \sum_{i=1}^{k} d_i = n$ and $k$ is minimized}
+		$C \leftarrow \emptyset;$
+		
+		\For{$i \leftarrow 1$ to $r$}{
+			\While{$n \geq c_i$}{
+				$C \leftarrow C \cap \{c_i\};$
+				
+				$n \leftarrow n - c_i;$
+			}
+		}
+		\Return{C;}
+		\caption{\textsc{Change} Makes change using the smallest number of coins}
+	\end{algorithm}
+	\vspace{2cm}
+	\begin{figure*}
+		\includegraphics[width=0.5\textwidth,height=12cm]{hhh}
+	\end{figure*}
+\begin{tabular}{||c c c c||} 
+\hline
+Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
+\hline\hline
+1 & 6 & 87837 & 787 \\ 
+\hline
+2 & 7 & 78 & 5415 \\
+\hline
+\end{tabular}
 \end{document}
