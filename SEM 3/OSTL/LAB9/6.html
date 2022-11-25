@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<body ng-app="q6" ng-controller="qq6">
+    <div ng-model="number">
+        2 : {{number | number:2}}
+        <br>
+        4 : {{number | number:4}}
+    </div>
+    <script src="angular/angular.js"></script>
+    <script>
+        var app=angular.module("q6",[]);
+        app.controller('qq6',function($scope)
+        {
+            $scope.number=22/7;
+        });
+    </script>
+</body>
+</html>

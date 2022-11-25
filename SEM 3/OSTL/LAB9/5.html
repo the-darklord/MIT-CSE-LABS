@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<body ng-app="q5" ng-controller="qq5">
+    <div ng-model="word">
+        LowerCase : {{word | lowercase}}
+        <br>
+        UpperCase : {{word | uppercase}}
+    </div>
+    <script src="angular/angular.js"></script>
+    <script>
+        var app=angular.module("q5",[]);
+        app.controller('qq5',function($scope)
+        {
+            $scope.word="QwErTy";
+        });
+    </script>
+</body>
+</html>
