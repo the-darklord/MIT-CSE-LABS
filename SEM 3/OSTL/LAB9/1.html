@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+    <body ng-app="q1" ng-controller="qq1">
+        <h3 ng-model="t1" >{{t1}}</h3>
+        <script src="angular/angular.js"></script>
+        <script>
+            var app=angular.module("q1",[]);
+            app.controller("qq1",['$scope',function($scope,$routeParams)
+            {
+                $scope.t1="CSE Branch,MIT Manipal";
+            }
+        ]);
+        </script>
+    </body>
+</html>

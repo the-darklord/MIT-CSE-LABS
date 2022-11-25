@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+    <body ng-app="q3" ng-controller="qq3">
+        <div>
+            <form action="javascript:void(0)">
+                <input type="text" id="fn" placeholder="Enter Price" ng-model="user.pn"> <br>
+                <br>
+                <input type="text" id="ln" placeholder="Enter Quantity" ng-model="user.qn"> <br>
+                <br>
+                {{user.pn*user.qn}}
+            </form>
+        </div>
+        <script src="angular/angular.js"></script>
+        <script>
+                var app=angular.module("q3",[]);
+                app.controller("qq3",['$scope',function($scope){}
+                ]);
+        </script>
+    </body>
+</html>

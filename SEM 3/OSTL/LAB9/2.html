@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+    <body ng-app="q2" ng-controller="qq2">
+        <div>
+            <form action="javascript:void(0)">
+                <input type="text" id="fn" placeholder="Enter First Name" ng-model="user.fn"> <br>
+                <br>
+                <input type="text" id="ln" placeholder="Enter Last Name" ng-model="user.ln"> <br>
+                <br>
+                {{user.fn}} &nbsp; {{user.ln}}
+            </form>
+        </div>
+        <script src="angular/angular.js"></script>
+        <script>
+                var app=angular.module("q2",[]);
+                app.controller("qq2",['$scope',function($scope){}
+                ]);
+        </script>
+    </body>
+</html>

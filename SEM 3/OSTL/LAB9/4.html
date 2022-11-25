@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<body>
+    <script src="angular/angular.min.js"></script>
+    <div ng-app="q4" ng-controller="qq4">
+        <select ng-model="Monthlist">
+            <option ng-repeat="x in monthsList">{{x}}</option>
+          </select>
+    </div>
+    <script>
+        var myApp = angular.module("q4",[]);
+        myApp.controller('qq4', function($scope) { 
+            $scope.monthsList = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        });
+    </script>
+</body>
+</html>
