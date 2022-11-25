@@ -1,6 +1,0 @@
-echo "Enter a Number"
-read num
-x=$((num%10))
-y=$((num/10))
-y=$((y%10))
-z
