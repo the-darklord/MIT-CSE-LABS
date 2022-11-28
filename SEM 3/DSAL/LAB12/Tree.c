@@ -13,6 +13,46 @@ Nodeptr getnode()
     return (Nodeptr)malloc(sizeof(struct node));
 }
 
+void insert(Nodeptr* root,int val){
+    Nodeptr head = *root;
+    Nodeptr temp = getnode();
+    Nodeptr parent = NULL;
+
+    temp->data = val;
+    temp->rchild = temp->lchild = NULL;
+    if(head == NULL){
+        head = temp;
+        *root = head;
+        return;
+    }
+    while(head != NULL){
+        parent = head;
+        if(val > head->data){
+            head = head->rchild;
+        }
+        else{
+            head = head->lchild;
+        }
+    }
+    if(val > parent->data){
+        parent->rchild = temp;
+    }
+    else{
+        parent->lchild = temp;
+    }
+    return;
+}
+
+void create_BST(Nodeptr* root){
+    int val;
+    while(1){
+        printf("Enter the value you want to insert(-1 to exit) : ");
+        scanf("%d",&val);
+        if(val == -1){break;}
+        insert(root,val);
+    }
+}
+
 void create_iter_BT(Nodeptr* root){
     int x,option;
     Nodeptr temp,prev = NULL;
