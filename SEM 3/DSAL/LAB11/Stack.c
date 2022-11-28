@@ -1,5 +1,6 @@
 #include<stdio.h>
-#include "Tree.c"
+
+typedef struct node *Nodeptr;
 
 typedef struct Stack{
     int top;

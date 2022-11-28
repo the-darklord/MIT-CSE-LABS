@@ -1,3 +1,4 @@
+#include "Tree.c"
 #include "Stack.c"
 
 void create_exp_tree(Nodeptr* root,char postfix[]){
