@@ -51,8 +51,11 @@ void main()
 	printf("Enter Number of Vertices : \t");
 	scanf("%d",&v);
 	int adj[v][v];
+	Nodeptr ll[v];
 	for(int i=0;i<v;i++)
 	{
+		ll[i]=NULL;
+		ll[i]=insert(ll[i],i+1);
 		for(int j=0;j<v;j++)
 		{
 			if(i==j)
@@ -64,6 +67,10 @@ void main()
 				printf("\nAre Vertices %d and %d are Adjacent?",(i+1),(j+1));
 				printf("\nEnter 1 for Yes , 0 for No : \t");
 				scanf("%d",&adj[i][j]);
+			}
+			if(adj[i][j])
+			{
+				ll[i]=insert(ll[i],j+1);
 			}
 		}
 	}
@@ -77,19 +84,6 @@ void main()
 		printf("\n");
 	}
 	printf("\nAdjacency List is \n");
-	Nodeptr ll[v];
-	for(int i=0;i<v;i++)
-	{
-		ll[i]=NULL;
-		ll[i]=insert(ll[i],i+1);
-		for(int j=0;j<v;j++)
-		{
-			if(adj[i][j])
-			{
-				ll[i]=insert(ll[i],j+1);
-			}
-		}
-	}
 	for(int i=0;i<v;i++)
 	{
 		Display(ll[i]);
