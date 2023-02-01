@@ -51,4 +51,4 @@ Module.symvers
 Mkfile.old
 dkms.conf
 .key
-key.txt
+key
