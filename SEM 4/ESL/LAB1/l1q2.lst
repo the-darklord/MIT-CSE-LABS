@@ -1,0 +1,142 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, DATA, READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode, CODE, READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 4804            LDR              R0, =DAT
+   12 00000002 4905            LDR              R1, =SRC
+   13 00000004 4A05            LDR              R2, =DST
+   14 00000006 6803            LDR              R3,[R0]
+   15 00000008 600B            STR              R3,[R1]
+   16 0000000A 680C            LDR              R4,[R1]
+   17 0000000C 6014            STR              R4,[R2]
+   18 0000000E         STOP
+   19 0000000E E7FE            B                STOP
+   20 00000010 00000005 
+                       DAT     DCD              5
+   21 00000014 00000000 
+              00000000 
+              00000000         AREA             mydata, DATA, READWRITE
+   22 00000000 00000000 
+                       SRC     DCD              0
+   23 00000004 00000000 
+                       DST     DCD              0
+   24 00000008         END
+                       
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\l1q2.d
+ -o.\l1q2.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\In
+c\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\l1q2.lst Q2\l1q2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file Q2\l1q2.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file Q2\l1q2.s
+   Uses
+      At line 2 in file Q2\l1q2.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DAT 00000010
+
+Symbol: DAT
+   Definitions
+      At line 20 in file Q2\l1q2.s
+   Uses
+      At line 11 in file Q2\l1q2.s
+Comment: DAT used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file Q2\l1q2.s
+   Uses
+      At line 5 in file Q2\l1q2.s
+      At line 9 in file Q2\l1q2.s
+
+STOP 0000000E
+
+Symbol: STOP
+   Definitions
+      At line 18 in file Q2\l1q2.s
+   Uses
+      At line 19 in file Q2\l1q2.s
+Comment: STOP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file Q2\l1q2.s
+   Uses
+      None
+Comment: mycode unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000004
+
+Symbol: DST
+   Definitions
+      At line 23 in file Q2\l1q2.s
+   Uses
+      At line 13 in file Q2\l1q2.s
+Comment: DST used once
+END 00000008
+
+Symbol: END
+   Definitions
+      At line 24 in file Q2\l1q2.s
+   Uses
+      None
+Comment: END unused
+SRC 00000000
+
+Symbol: SRC
+   Definitions
+      At line 22 in file Q2\l1q2.s
+   Uses
+      At line 12 in file Q2\l1q2.s
+Comment: SRC used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 21 in file Q2\l1q2.s
+   Uses
+      None
+Comment: mydata unused
+4 symbols
+343 symbols in table
