@@ -404,6 +404,13 @@
       <Groups>
         <Group>
           <GroupName>Source Group 1</GroupName>
+          <Files>
+            <File>
+              <FileName>l2q4.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\l2q4.s</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
