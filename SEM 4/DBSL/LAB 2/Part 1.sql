@@ -97,15 +97,54 @@ rename department to tdl;
 
 
 --Q24
-alter table employee add (DOB varchar(8));
- 
-insert into employee values(7,'Sharel','F',10000,'Udupi',2,'12022003');
 
+alter table employee add (DOB date);
+update employee set DOB='25-SEP-2003';
+insert into employee values(7,'Sharel','F',10000,'Udupi',2,'12-FEB-2003');
 
+select to_date(DOB,'DD-MON-YYYY') DOB from employee;
+select to_date(DOB,'DD-MON-YY') DOB from employee;
+select to_date(DOB,'DD-MM-YY') DOB from employee;
 
+--Q25
 
+select empname,to_char(DOB,'YEAR') DOB from employee;
+select empname,to_char(DOB,'Year') DOB from employee;
+select empname,to_char(DOB,'year') DOB from employee;
 
+--Q26
 
+select empname,to_char(DOB,'DAY') DOB from employee;
+select empname,to_char(DOB,'Day') DOB from employee;
+
+--Q27
+
+select empname,to_char(DOB,'MONTH') DOB from employee;
+select empname,to_char(DOB,'Month') DOB from employee;
+
+--Q28
+
+select last_day(DOB) DOB from employee;
+
+--Q29
+
+select round(months_between('16-FEB-2023',DOB)/12) AGE from employee;
+
+--Q30
+
+select next_day(DOB,'SATURDAY') NEXT_SAT from employee;
+
+--Q31
+
+select * from employee where to_char(DOB,'YYYY')='2003';
+
+--Q32
+
+select * from employee where cast(to_char(DOB,'YYYY') as int) between 2002 and 2004;
+
+--Q33
+
+select * from employee where round(months_between(cast(&X as date),DOB)/12)>=60;
 
 
 
