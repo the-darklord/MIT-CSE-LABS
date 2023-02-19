@@ -1,6 +1,6 @@
 # MIT-CSE-LABS
 
- #SEM 3 
+## SEM 3 
  
    ->     [DSAL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%203/DSAL)
    
@@ -10,9 +10,9 @@
    
    ->     [OSTL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%203/OSTL)
         
-   <br>
+   <br><br>
         
- #SEM 4
+## SEM 4
  
    ->     [DAAL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%204/DAAL)
    
