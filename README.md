@@ -13,10 +13,8 @@
         
  . SEM 4
  
-   [DAAL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%204/DAAL)
-        
-        . ESL
-               https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%204/ESL
-        
-        . DBSL
-               https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%204/DBSL
+   ->     [DAAL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%204/DAAL)
+   
+   ->     [ESL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%204/ESL)   
+   
+   ->     [DBSL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%204/DBSL)
