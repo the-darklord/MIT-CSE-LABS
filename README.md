@@ -1,17 +1,18 @@
 # MIT-CSE-LABS
 
- . SEM 3 
-
-        . DSAL
+ #SEM 3 
+ 
+   ->     [DSAL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%203/DSAL)
+   
+   ->     [DSDL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%203/DSDL)
+   
+   ->     [OOPL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%203/OOPL)
+   
+   ->     [OSTL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%203/OSTL)
         
-        . DSDL
-        
-        . OSTL
-        
-        . OOPL
         
         
- . SEM 4
+ #SEM 4
  
    ->     [DAAL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%204/DAAL)
    
