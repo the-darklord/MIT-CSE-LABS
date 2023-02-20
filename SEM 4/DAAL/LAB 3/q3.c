@@ -1,66 +1,43 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include <math.h>
 
-/*
-Code Not Completed
-*/
-
-
-int are_disjoint(int a[],int b[])
-{
-    int m=sizeof(a)/sizeof(a[0]);
-    int n=sizeof(b)/sizeof(b[0]);
-    for(int i=0;i<m;i++)
-    {
-        for(int j=0;j<n;j++)
-        {
-            if(a[i]==b[j])
-            {
-                return 0;
-            }
-        }
-    }
-    return 1;
+void subsets(int* arr,int n,int des_sum,int* opcount){\
+	int n_sets = 0;
+	int n_subsets = pow(2,n);
+	for(int i=0;i<n_subsets;i++){
+		int sum=0,count=0;
+		int* sub = (int*)calloc(n,sizeof(int));
+		for(int j=0;j<n;j++){
+			(*opcount)++;
+			if(i & (1 << j)){
+				sub[count++] = arr[j];
+				sum+=arr[j];
+			}
+		}
+		if(des_sum == sum){
+			n_sets++;
+			for(int k=0;k<count;k++)
+				printf("%d ",sub[k]);
+			printf("\n");
+			if(n_sets == 2)
+				return;
+		}
+	}
 }
 
-int is_sum_equal(int a[],int b[])
-{
-    int m=sizeof(a)/sizeof(a[0]);
-    int n=sizeof(b)/sizeof(b[0]);
-    int sum1=0,sum2=0;
-    for(int i=0;i<m;i++)
-    {
-        sum1+=a[i];
-    }
-    for(int i=0;i<n;i++)
-    {
-        sum2+=b[i];
-    }
-    if(sum1==sum2)
-    {
-        return 1;
-    }
-    return 0;
-}
-
-void main()
-{
-    int n;
-    printf("Enter Number of Elements : \t");
-    scanf("%d",&n);
-    int arr[n];
-    printf("Enter Array Elements : \n");
-    for(int i=0;i<n;i++)
-    {
-        printf("Enter Element %d : \t",i+1);
-        scanf("%d",&arr[i]);
-    }
-    int j=0;
-    int a1[n/2],a2[n/2];
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<n;j++)
-        {
-            
-        }
-    }
+int main(){
+	int n,opcount=0;
+	printf("Enter the value of n: ");
+	scanf("%d",&n);
+	int* arr = (int*)malloc(n*sizeof(int));
+	printf("Enter the elements: ");
+	int sum=0;
+	for(int i=0;i<n;i++){
+		scanf("%d",&arr[i]);
+		sum+=arr[i];
+	}
+	subsets(arr,n,sum/2,&opcount);
+	printf("Operation count: %d\n",opcount);
+	return 0;
 }
