@@ -123,12 +123,12 @@ select avg_sal from(select avg(salary) avg_sal,dept_name from instructor group b
 */
 
 --Q10
-select max(enrol) from (select course_id,sec_id,count(ID) enrol from section natural join takes where semester='Spring' and year=2009 group by course_id,sec_id);
+select max(enrol) from (select course_id,sec_id,count(ID) enrol from section natural join takes where semester='Spring' and year=2010 group by course_id,sec_id);
 /*
 
 MAX(ENROL)
 ----------
-         2
+         7
 */
 
 --Q11
