@@ -216,3 +216,32 @@ Finance                   85000
 Biology                   72000
 History                   61000
 */
+
+--Q18
+create view Phy_Dept as select building,room_number from section natural join course where dept_name='Physics' and semester='Fall' and year=2009;
+
+--Q19
+ select * from Phy_Dept;
+ /*
+ 
+BUILDING        ROOM_NU
+--------------- -------
+Watson          100
+ */
+ 
+ --Q20
+ create view dept_tot_sal as select dept_name,sum(salary) tot_salary from instructor group by dept_name;
+ select * from dept_tot_sal;
+ /*
+ 
+DEPT_NAME            TOT_SALARY
+-------------------- ----------
+Elec. Eng.                80000
+Physics                  182000
+Comp. Sci.               232000
+Finance                  170000
+Biology                   72000
+Music                     40000
+History                  122000
+
+ */
