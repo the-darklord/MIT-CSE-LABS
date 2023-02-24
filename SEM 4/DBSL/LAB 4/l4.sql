@@ -179,11 +179,13 @@ SEC_ID   MAX(ENCOUNT)
 */
 
 --Q16
-with Fin_TotCred(totcred) as (select tot_cred from student where dept_name='Finance') select dept_name,sum(tot_cred) from student,Fin_TotCred group by dept_name having sum(tot_cred)> sum(totcred);
+with Fin_TotCred(totcred) as (select tot_cred from student where dept_name='Finance') select dept_name,sum(tot_cred) from student,Fin_TotCred group by dept_name having sum(tot_cred)>max(totcred);
 /*
 
 DEPT_NAME            SUM(TOT_CRED)
 -------------------- -------------
+Elec. Eng.                     158
+Comp. Sci.                     246
 Biology                        120
 */
 
