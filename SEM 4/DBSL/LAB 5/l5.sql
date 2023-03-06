@@ -248,3 +248,45 @@ select sum(salary) Sum,max(salary) Max,min(salary) Min,avg(salary) Avg from empl
 ---------- ---------- ---------- ----------
     318000      55000      25000 35333.3333
 */
+
+--Q16
+with  Res_Dept_Sal(sal) as (select salary from employee e,department d where e.dno=d.dnumber and d.dname='Research') select sum(sal),max(sal),min(sal),avg(sal) from Res_Dept_Sal; 
+/*
+
+  SUM(SAL)   MAX(SAL)   MIN(SAL)   AVG(SAL)
+---------- ---------- ---------- ----------
+    133000      40000      25000      33250
+*/
+
+--Q17
+select pnumber,pname,count(distinct ssn) from employee e, project p where e.dno=p.dnum group by pnumber,pname;
+/*
+
+   PNUMBER PNAME           COUNT(DISTINCTE.SSN)
+---------- --------------- --------------------
+        10 Computerization                    5
+        30 Newbenefits                        5
+         1 ProductX                           4
+         2 ProductY                           4
+         3 ProductZ                           4
+*/
+
+--Q18
+select pnumber,pname,count(distinct ssn) from employee e, project p where e.dno=p.dnum group by pnumber,pname having count(distinct ssn)>2;
+/*
+
+   PNUMBER PNAME           COUNT(DISTINCTSSN)
+---------- --------------- ------------------
+        30 Newbenefits                      5
+         2 ProductY                         4
+        10 Computerization                  5
+         1 ProductX                         4
+         3 ProductZ                         4
+*/
+
+--Q19
+select dnumber,count(distinct ssn) from employee e, department d where e.dno=d.dnumber and salary>40000 group by dnumber having count(distinct ssn)>5;
+/*
+
+no rows selected
+*/
