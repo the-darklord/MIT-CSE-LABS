@@ -85,7 +85,7 @@ void main()
             break;
         }
     }
-    printf("Enter Directed Adjacency Matrix for SOURCE REMOVAL : \n");
+    printf("\n\nEnter Directed Adjacency Matrix for SOURCE REMOVAL : \n");
     for(int i=0;i<n;i++)
     {
         visited[i]=0;

@@ -59,10 +59,7 @@ int findDiam(Nodeptr root)
         temp=lh+rh+1;
         findDiam(root->lchild);
         findDiam(root->rchild);
-        if(temp>diam)
-        {
-            diam=temp;
-        }
+        diam=max(temp,diam);
     }
 
 }
