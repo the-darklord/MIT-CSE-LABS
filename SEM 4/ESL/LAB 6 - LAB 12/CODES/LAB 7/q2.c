@@ -2,7 +2,7 @@
 
 unsigned char array[10]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};
 unsigned int seg_select[4]={0<<23,1<<23,2<<23,3<<23};
-unsigned int dig[4]={9,9,9,9};
+int dig[4]={9,9,9,9};
 unsigned int i;
 
 void delay(unsigned int r)
@@ -31,15 +31,14 @@ int main()
 			{
 				LPC_GPIO1->FIOPIN=seg_select[i];
 				LPC_GPIO0->FIOPIN=array[dig[i]]<<4;
-				delay(100000);
+				delay(1000);
 			}
-			delay(10000);
+			delay(1000);
 			LPC_GPIO0->FIOCLR |= 0xFF0;
 		}
 		}
 		}
 		}
-		dig={9,9,9,9};
 	}
 	return 0;
 }

@@ -2,7 +2,7 @@
 
 unsigned char array[10]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};
 unsigned int seg_select[4]={0<<23,1<<23,2<<23,3<<23};
-unsigned int dig[4]={0,0,0,0};
+int dig[4]={0,0,0,0};
 unsigned int i;
 
 void delay(unsigned int r)
@@ -25,9 +25,9 @@ void bcd_down()
 			{
 				LPC_GPIO1->FIOPIN=seg_select[i];
 				LPC_GPIO0->FIOPIN=array[dig[i]]<<4;
-				delay(100000);
+				delay(1000);
 			}
-			delay(10000);
+			delay(1000);
 			LPC_GPIO0->FIOCLR |= 0xFF0;
 		}
 		}
@@ -49,9 +49,9 @@ void bcd_up()
 			{
 				LPC_GPIO1->FIOPIN=seg_select[i];
 				LPC_GPIO0->FIOPIN=array[dig[i]]<<4;
-				delay(100000);
+				delay(1000);
 			}
-			delay(10000);
+			delay(1000);
 			LPC_GPIO0->FIOCLR |= 0xFF0;
 		}
 		}
@@ -65,18 +65,18 @@ int main()
 	SystemCoreClockUpdate();
 	LPC_GPIO0->FIODIR |=0xFF0; 
 	LPC_GPIO1->FIODIR |= 0x07800000;
-	LPC_GPIO0->FIODIR &= 0xFFFF7FFF;
+	LPC_GPIO2->FIODIR &= 0xFFFFFFFE;
 	while(1)
 	{
-		if(LPC_GPIO0->FIOPIN&1<<15)
+		if(LPC_GPIO2->FIOPIN&1)
 		{
 			bcd_down();
-			delay(100000);
+			delay(1000);
 		}
 		else
 		{
 			bcd_up();
-			delay(100000);
+			delay(1000);
 		}
 	}
 	return 0;
