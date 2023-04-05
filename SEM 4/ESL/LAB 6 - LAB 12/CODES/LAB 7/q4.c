@@ -24,7 +24,7 @@ void hex_down()
 			for(i=0;i<4;i++)
 			{
 				LPC_GPIO1->FIOPIN=seg_select[i];
-				LPC_GPIO0->FIOPIN=array[i]<<4;
+				LPC_GPIO0->FIOPIN=array[dig[i]]<<4;
 				delay(1000);
 			}
 			delay(1000);
