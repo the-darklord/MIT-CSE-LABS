@@ -15,7 +15,7 @@ void display()
 {
 	LPC_GPIO1->FIOPIN=dig_select[dig_count];
 	LPC_GPIO0->FIOPIN=array[dig[dig_count]-1]<<4;
-	delay(1000);
+	delay(100000);
 }
 
 int main()
@@ -26,7 +26,7 @@ int main()
 	LPC_GPIO1->FIODIR =0x07800000; 
 	while(1)
 	{
-		delay(1000);
+		delay(100000);
 		display();
 		dig_count+=1;
 		if(dig_count==4)

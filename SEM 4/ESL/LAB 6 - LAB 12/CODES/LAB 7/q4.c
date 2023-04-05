@@ -25,9 +25,9 @@ void hex_down()
 			{
 				LPC_GPIO1->FIOPIN=seg_select[i];
 				LPC_GPIO0->FIOPIN=array[dig[i]]<<4;
-				delay(1000);
+				delay(500);
 			}
-			delay(1000);
+			delay(500);
 			LPC_GPIO0->FIOCLR |= 0xFF0;
 		}
 		}
@@ -49,9 +49,9 @@ void hex_up()
 			{
 				LPC_GPIO1->FIOPIN=seg_select[i];
 				LPC_GPIO0->FIOPIN=array[dig[i]]<<4;
-				delay(1000);
+				delay(500);
 			}
-			delay(1000);
+			delay(500);
 			LPC_GPIO0->FIOCLR |= 0xFF0;
 		}
 		}
@@ -71,12 +71,12 @@ int main()
 		if(LPC_GPIO2->FIOPIN&1)
 		{
 			hex_down();
-			delay(1000);
+			delay(500);
 		}
 		else
 		{
 			hex_up();
-			delay(1000);
+			delay(500);
 		}
 	}
 	return 0;
