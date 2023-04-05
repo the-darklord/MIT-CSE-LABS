@@ -1,6 +1,6 @@
 #include <LPC17xx.h>
 
-unsigned char array[16]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F,0x77,};
+unsigned char array[16]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F,0x77,0x7C,0x39,0x5E,0x79,0x71};
 unsigned int seg_select[4]={0<<23,1<<23,2<<23,3<<23};
 unsigned int dig[4]={0,0,0,0};
 unsigned int i;
@@ -11,15 +11,15 @@ void delay(unsigned int r)
 	for(t=1;t<=r;t++);
 }
 
-void bcd_down()
+void hex_down()
 {
-	for(dig[3]=9;dig[3]>=0;dig[3]--)
+	for(dig[3]=15;dig[3]>=0;dig[3]--)
 		{
-			for(dig[2]=9;dig[2]>=0;dig[2]--)
+			for(dig[2]=15;dig[2]>=0;dig[2]--)
 		{
-			for(dig[1]=9;dig[1]>=0;dig[1]--)
+			for(dig[1]=15;dig[1]>=0;dig[1]--)
 		{
-			for(dig[0]=9;dig[0]>=0;dig[0]--)
+			for(dig[0]=15;dig[0]>=0;dig[0]--)
 		{
 			for(i=0;i<4;i++)
 			{
@@ -35,15 +35,15 @@ void bcd_down()
 		}
 }
 
-void bcd_up()
+void hex_up()
 {
-	for(dig[3]=0;dig[3]<=9;dig[3]++)
+	for(dig[3]=0;dig[3]<=15;dig[3]++)
 		{
-			for(dig[2]=0;dig[2]<=9;dig[2]++)
+			for(dig[2]=0;dig[2]<=15;dig[2]++)
 		{
-			for(dig[1]=0;dig[1]<=9;dig[1]++)
+			for(dig[1]=0;dig[1]<=15;dig[1]++)
 		{
-			for(dig[0]=0;dig[0]<=9;dig[0]++)
+			for(dig[0]=0;dig[0]<=15;dig[0]++)
 		{
 			for(i=0;i<4;i++)
 			{
@@ -65,17 +65,17 @@ int main()
 	SystemCoreClockUpdate();
 	LPC_GPIO0->FIODIR |=0xFF0; 
 	LPC_GPIO1->FIODIR |= 0x07800000;
-	LPC_GPIO2->FIODIR &= 0xFFFFEFFF;
+	LPC_GPIO0->FIODIR &= 0xFFFF7FFF;
 	while(1)
 	{
-		if(LPC_GPIO2->FIOPIN&1<<12)
+		if(LPC_GPIO2->FIOPIN&1<<15)
 		{
-			bcd_down();
+			hex_down();
 			delay(100000);
 		}
 		else
 		{
-			bcd_up();
+			hex_up();
 			delay(100000);
 		}
 	}
