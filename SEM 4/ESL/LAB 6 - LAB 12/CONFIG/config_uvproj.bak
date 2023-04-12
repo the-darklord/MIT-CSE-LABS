@@ -415,11 +415,6 @@
               <FileType>1</FileType>
               <FilePath>.\system_LPC17xx.c</FilePath>
             </File>
-            <File>
-              <FileName>LED.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\LED.c</FilePath>
-            </File>
           </Files>
         </Group>
       </Groups>
