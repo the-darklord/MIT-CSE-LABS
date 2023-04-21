@@ -5,7 +5,7 @@ declare
 sal instructor.salary%TYPE;
 budg department.budget%TYPE;
 begin
-	IF LENGTH(TRIM(TRANSLATE(:NEW.name, '[a-z][A-Z]', ' '))) > 0 then
+	IF LENGTH(TRIM(TRANSLATE(:NEW.name, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ' '))) > 0 then
 		RAISE_APPLICATION_ERROR(-20100,'Name must contain only alphabets');
 ELSE
     IF :NEW.salary < 1 THEN
