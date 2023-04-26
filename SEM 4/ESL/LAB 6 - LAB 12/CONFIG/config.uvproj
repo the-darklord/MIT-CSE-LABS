@@ -416,9 +416,9 @@
               <FilePath>.\system_LPC17xx.c</FilePath>
             </File>
             <File>
-              <FileName>q1.c</FileName>
+              <FileName>q2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\CODES\LAB 8\q1.c</FilePath>
+              <FilePath>..\CODES\LAB 9\q2.c</FilePath>
             </File>
           </Files>
         </Group>

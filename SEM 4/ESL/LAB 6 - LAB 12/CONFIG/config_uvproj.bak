@@ -415,6 +415,11 @@
               <FileType>1</FileType>
               <FilePath>.\system_LPC17xx.c</FilePath>
             </File>
+            <File>
+              <FileName>q1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODES\LAB 8\q1.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
