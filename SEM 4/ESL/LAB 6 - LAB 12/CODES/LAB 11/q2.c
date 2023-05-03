@@ -1,5 +1,5 @@
 #include <LPC17xx.h>
-int pulsewidth[] = {0,1000,2500,5000,7500};
+int pulsewidth[] = {0,3000,7500,15000,22500};
 int count=1;
 int dir=0;
 unsigned int temp3;
@@ -10,7 +10,7 @@ int scan(void);
 int main(void)
 {
 	LPC_GPIO0->FIODIR |= 1<<8;
-	LPC_GPIO0->FIODIR &= ~(1<<4);
+	LPC_GPIO0->FIODIR &= ~(0xF<<4);
 	SystemInit();
 	SystemCoreClockUpdate();
 	initPWM();
@@ -25,8 +25,6 @@ int main(void)
 			updatepulsewidth(pulsewidth[3]);
 		else if(count==0x8)
 			updatepulsewidth(pulsewidth[4]);
-		else
-			updatepulsewidth(pulsewidth[0]);
 		delayMS(100000);
 	}
 }
