@@ -1,8 +1,8 @@
 #include <LPC17xx.h>
 #include "lcd.c"
 
-unsigned char Msg1[16]={"SAIMIHIRNATH"};
-unsigned char Msg2[16]={"SHREYASH"};
+unsigned char Msg1[16]={"ARYAN"};
+unsigned char Msg2[16]={"MANGLA"};
 
 int main(void)
 {
