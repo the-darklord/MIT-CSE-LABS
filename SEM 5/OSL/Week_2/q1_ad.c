@@ -1,4 +1,20 @@
 #include "include.h"
+//Incomplete
+void Sort(char** fnames,int k)
+{
+    for(i=0;i<n;i++)
+    {
+      for(j=i+1;j<n;j++)
+      {
+        if(strcmp(str[i],str[j])>0)
+        {
+            strcpy(s,str[i]);
+            strcpy(str[i],str[j]);
+            strcpy(str[j],s);
+        }
+      }
+   }
+}
 
 void printFiles(char* dir)
 {
@@ -6,6 +22,8 @@ void printFiles(char* dir)
     struct dirent *entry;
     struct stat statbuf;
     dp=opendir(dir);
+    char fnames[100][100];
+    int k=0;
     if(!dp)
     {
         printf("Cannot open directory : %s\n",dir);
@@ -21,7 +39,7 @@ void printFiles(char* dir)
             {
                 continue;
             }
-            printf("%s\n",entry->d_name);
+            strcpy(fnames[k++],entry->d_name);
         }
     }
     chdir("..");
