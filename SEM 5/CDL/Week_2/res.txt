@@ -1,0 +1,6 @@
+
+void main()
+{
+  printf("    printing #      ");
+ printf("#include<string.h>");
+}
