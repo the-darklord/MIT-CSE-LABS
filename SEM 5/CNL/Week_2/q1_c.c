@@ -27,7 +27,7 @@ void main()
 
     printf("Enter Size of Array : \t");
     scanf("%d",&size);
-    int buf[size];
+    int buf[size],pid;
     printf("\nEnter Array Elements : \n");
     for(int i=0;i<size;i++)
     {
@@ -38,13 +38,13 @@ void main()
     
     write(sockid,buf,size*sizeof(int));
 
-    printf("Parent Process ID : %d\n",getppid());
+    n=read(sockid,buf,sizeof(buf));
 
-    printf("Child Process ID : %d\n",getpid());
+    n=read(sockid,&pid,sizeof(pid));
+
+    printf("Child Process ID : %d\n",pid);
 
     printf("Sorted Array returned from Server : \n");
-
-    n=read(sockid,buf,sizeof(buf));
 
     for(int i=0;i<size;i++)
     {

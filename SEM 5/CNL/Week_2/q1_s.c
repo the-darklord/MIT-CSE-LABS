@@ -53,6 +53,8 @@ void main()
             n=read(newsockid,buf,sizeof(buf));
             sort(buf,size);
             n=write(newsockid,buf,sizeof(buf));
+            int pid=getpid();
+            n=write(newsockid,&pid,sizeof(pid));
             close(newsockid);
             exit(0);
         }

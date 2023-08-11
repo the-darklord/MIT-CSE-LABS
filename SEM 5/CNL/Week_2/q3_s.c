@@ -28,10 +28,13 @@ void main()
 
         if(fork()==0)
         {
+            printf("Created New Child with ID : %d\n",getpid());
             time_t t;
             time(&t);
             char tt[256];
             strcpy(tt,ctime(&t));
+            int pid=getpid();
+            n=write(newsockid,&pid,sizeof(pid));
             n=write(newsockid,tt,sizeof(tt));
             close(newsockid);
             exit(0);

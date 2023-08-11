@@ -27,6 +27,12 @@ void main()
 
     char tt[256];
 
+    int pid;
+
+    n=read(sockid,&pid,sizeof(pid));
+
+    printf("Child Process ID : %d\n",pid);
+
     printf("Time returned from Server : \n");
 
     n=read(sockid,tt,sizeof(tt));
