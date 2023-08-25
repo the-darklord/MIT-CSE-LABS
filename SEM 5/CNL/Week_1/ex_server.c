@@ -18,7 +18,7 @@ void main()
     sock_id = socket(AF_INET,SOCK_STREAM,0);
 
     server_addr.sin_family=AF_INET;
-    server_addr.sin_addr.s_addr=inet_addr("172.16.59.56");
+    server_addr.sin_addr.s_addr=inet_addr("172.16.59.52");
     server_addr.sin_port=htons(PORTNO);
 
     bind(sock_id,&server_addr,sizeof(server_addr));
