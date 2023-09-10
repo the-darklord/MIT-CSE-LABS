@@ -1,27 +1,27 @@
-###Configuring PC
+### Configuring PC
 
-#PC1
+# PC1
 ip 30.0.0.1/8 30.255.255.254
 
-#PC2
+# PC2
 ip 30.0.0.2/8 30.255.255.254
 
-#PC3
+# PC3
 ip 172.16.0.1/16 172.16.255.254
 
-#PC4
+# PC4
 ip 172.16.0.2/16 172.16.255.254
 
-#PC5
+# PC5
 ip 192.168.1.1/24 192.168.1.254
 
-#PC6
+# PC6
 ip 192.168.1.2/24 192.168.1.254
 
 
-###Configuring Routers
+### Configuring Routers
 
-#Router1
+# Router1
 
 config t
 
@@ -41,7 +41,7 @@ no shutdown
 exit
 
 
-#Router2
+# Router2
 
 config t
 
@@ -61,7 +61,7 @@ no shutdown
 exit
 
 
-#Router3
+# Router3
 
 config t
 
@@ -76,7 +76,7 @@ no shutdown
 exit
 
 
-#Router4
+# Router4
 
 config t
 
@@ -96,32 +96,32 @@ no shutdown
 exit
 
 
-###Routing
+### Routing
 
-#Router 1
+# Router 1
 
 ip route 172.16.0.0 255.255.0.0 20.0.0.2
 ip route 192.168.1.0 255.255.255.0 10.0.0.2
 
 
-#Router 2
+# Router 2
 
 ip route 30.0.0.0 255.0.0.0 50.0.0.1
 ip route 192.168.1.0 255.255.255.0 40.0.0.2
 
-#Router 3
+# Router 3
 
 ip route 30.0.0.0 255.0.0.0 20.0.0.1
 ip route 172.16.0.0 255.255.0.0 50.0.0.2
 
 
-#Router 4
+# Router 4
 
 ip route 30.0.0.0 255.0.0.0 10.0.0.1
 ip route 172.16.0.0 255.255.0.0 40.0.0.1
 
 
-###Pinging
+### Pinging
 
 ping 30.0.0.1
 ping 30.0.0.2
