@@ -19,3 +19,13 @@
    ->     [ESL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%204/ESL)   
    
    ->     [DBSL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%204/DBSL)
+
+   <br><br>
+        
+## SEM 5
+ 
+   ->     [CDL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%205/CDL)
+   
+   ->     [CNL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%205/CNL)   
+   
+   ->     [OSL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%205/OSL)
