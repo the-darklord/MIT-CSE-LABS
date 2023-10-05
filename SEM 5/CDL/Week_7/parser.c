@@ -97,6 +97,11 @@ void assignStat()
                     cur=getNextToken(f);
                     return;
                 }
+                else
+                {
+                    printf("Missing \";\" at Row : %d and Column : %d\n",cur.row,cur.col);
+                    exit(EXIT_FAILURE);
+                }
             }
             else if(strcmp(cur.type,"Number")==0)
             {
