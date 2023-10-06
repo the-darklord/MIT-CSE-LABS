@@ -1,0 +1,39 @@
+R1
+
+conf t
+
+int f0/0
+ip address 192.168.1.254 255.255.255.0
+ip helper-address 20.0.0.2
+no shut
+exit
+
+int f0/1
+ip address 10.255.255.254 255.0.0.0
+ip helper-address 20.0.0.2
+no shut
+exit
+
+int f2/0
+ip address 20.0.0.1 255.0.0.0
+no shut
+exit
+
+R2
+
+conf t
+
+int f0/0
+ip address 20.0.0.2 255.0.0.0
+no shut
+exit
+
+ip dhcp pool CSE
+network 192.168.1.0 255.255.255.0
+default-router 192.168.1.254
+exit
+
+ip dhcp pool IT
+network 10.0.0.0 255.0.0.0
+default-router 10.255.255.254
+exit

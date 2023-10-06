@@ -1,0 +1,26 @@
+Sep 22 13:15:17.296 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Sep 22 13:15:17.296 HYPERVISOR: Started on IP = localhost, TCP port = 50429.
+Sep 22 13:15:17.785 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 22 13:15:17.785 HYPERVISOR: exec_cmd: hypervisor working_dir D:\Practice\GNS\l8-q2\project-files\dynamips 
+Sep 22 13:15:17.786 GENERAL: working_dir=D:\Practice\GNS\l8-q2\project-files\dynamips
+Sep 22 13:15:17.786 HYPERVISOR: exec_cmd: hypervisor working_dir D:\Practice\GNS\l8-q2\project-files\dynamips\75a2181e-c516-45bc-a9fc-06743389cf5e 
+Sep 22 13:15:17.786 GENERAL: working_dir=D:\Practice\GNS\l8-q2\project-files\dynamips\75a2181e-c516-45bc-a9fc-06743389cf5e
+Sep 22 13:15:17.787 HYPERVISOR: exec_cmd: vm create R2 2 c3745 
+Sep 22 13:15:17.788 VM: VM R2 created.
+Sep 22 13:15:17.788 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5000 
+Sep 22 13:15:17.788 HYPERVISOR: exec_cmd: c3745 get_mac_addr R2 
+Sep 22 13:15:17.789 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Sep 22 13:15:17.789 HYPERVISOR: exec_cmd: vm set_exec_area R2 64 
+Sep 22 13:15:17.790 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 13:15:17.790 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x60a80f7c 
+Sep 22 13:15:17.792 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/SAIMIHIRNATH/GNS3/images/IOS/c3745-advipservicesk9-mz.124-25d.image 
+Sep 22 13:15:17.792 HYPERVISOR: exec_cmd: c3745 set_mac_addr R2 c402.58b5.0000 
+Sep 22 13:15:17.793 HYPERVISOR: exec_cmd: vm set_nvram R2 256 
+Sep 22 13:15:17.794 HYPERVISOR: exec_cmd: vm set_ram R2 256 
+Sep 22 13:15:17.794 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 13:15:17.794 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 NM-4T 
+Sep 22 13:15:17.795 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 13:15:17.795 HYPERVISOR: exec_cmd: vm slot_add_binding R2 2 0 NM-1FE-TX 
+Sep 22 13:16:15.413 HYPERVISOR: Stopped.
+Sep 22 13:16:15.413 VM: VM R2 destroyed.
+Sep 22 13:16:15.413 GENERAL: reset done.

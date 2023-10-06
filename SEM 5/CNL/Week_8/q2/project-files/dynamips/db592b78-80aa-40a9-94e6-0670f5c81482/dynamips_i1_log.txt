@@ -1,0 +1,27 @@
+Sep 22 13:15:16.964 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Sep 22 13:15:16.965 HYPERVISOR: Started on IP = localhost, TCP port = 50426.
+Sep 22 13:15:17.187 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 22 13:15:17.187 HYPERVISOR: exec_cmd: hypervisor working_dir D:\Practice\GNS\l8-q2\project-files\dynamips 
+Sep 22 13:15:17.225 GENERAL: working_dir=D:\Practice\GNS\l8-q2\project-files\dynamips
+Sep 22 13:15:17.225 HYPERVISOR: exec_cmd: hypervisor working_dir D:\Practice\GNS\l8-q2\project-files\dynamips\db592b78-80aa-40a9-94e6-0670f5c81482 
+Sep 22 13:15:17.225 GENERAL: working_dir=D:\Practice\GNS\l8-q2\project-files\dynamips\db592b78-80aa-40a9-94e6-0670f5c81482
+Sep 22 13:15:17.228 HYPERVISOR: exec_cmd: vm create R1 1 c3745 
+Sep 22 13:15:17.229 VM: VM R1 created.
+Sep 22 13:15:17.229 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5013 
+Sep 22 13:15:17.230 HYPERVISOR: exec_cmd: c3745 get_mac_addr R1 
+Sep 22 13:15:17.230 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Sep 22 13:15:17.230 HYPERVISOR: exec_cmd: vm set_exec_area R1 64 
+Sep 22 13:15:17.231 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 22 13:15:17.231 HYPERVISOR: exec_cmd: vm set_idle_pc R1 0x60a80f7c 
+Sep 22 13:15:17.234 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/SAIMIHIRNATH/GNS3/images/IOS/c3745-advipservicesk9-mz.124-25d.image 
+Sep 22 13:15:17.235 HYPERVISOR: exec_cmd: c3745 set_mac_addr R1 c401.5897.0000 
+Sep 22 13:15:17.235 HYPERVISOR: exec_cmd: vm set_nvram R1 256 
+Sep 22 13:15:17.236 HYPERVISOR: exec_cmd: vm set_ram R1 256 
+Sep 22 13:15:17.237 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 22 13:15:17.237 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 NM-4T 
+Sep 22 13:15:17.239 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 22 13:15:17.240 HYPERVISOR: exec_cmd: vm slot_add_binding R1 2 0 NM-1FE-TX 
+Sep 22 13:15:19.647 HYPERVISOR: exec_cmd: nio create_udp udp-10a142e5-ef79-4585-9077-85fe615e6bc6 2010 127.0.0.1 2011 
+Sep 22 13:16:15.413 HYPERVISOR: Stopped.
+Sep 22 13:16:15.413 VM: VM R1 destroyed.
+Sep 22 13:16:15.414 GENERAL: reset done.
