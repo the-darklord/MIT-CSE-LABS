@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Product Billing System</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input, select {
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px;
+      background-color:green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Product Billing System</h1>
+
+  <form id="billingForm">
+    <label for="brand">Select Brand:</label>
+    <select id="brand" name="brand">
+      <option value="HP">HP</option>
+      <option value="Nokia">Nokia</option>
+      <option value="Samsung">Samsung</option>
+      <option value="Motorola">Motorola</option>
+      <option value="Apple">Apple</option>
+    </select>
+
+    <label for="productType">Select Product Type:</label>
+    <input type="checkbox" id="mobile" name="productType" value="Mobile"> Mobile
+    <input type="checkbox" id="laptop" name="productType" value="Laptop"> Laptop
+
+    <label for="quantity">Enter Quantity:</label>
+    <input type="text" id="quantity" name="quantity" placeholder="Enter quantity">
+
+    <button type="button" id="produceBill">Produce Bill</button>
+  </form>
+
+  <script>
+    $(document).ready(function () {
+      $("#produceBill").click(function () {
+        var selectedBrand = $("#brand").val();
+        var selectedTypes = [];
+        $("input[name='productType']:checked").each(function () {
+          selectedTypes.push($(this).val());
+        });
+        var quantity = $("#quantity").val();
+        var totalAmount = calculateTotalAmount(selectedTypes, quantity);
+        alert("Total Amount: $" + totalAmount);
+      });
+
+      function calculateTotalAmount(types, quantity) {
+        var pricePerItem = 100;
+        var totalAmount = pricePerItem * quantity * types.length;
+        return totalAmount;
+      }
+    });
+  </script>
+</body>
+</html>
