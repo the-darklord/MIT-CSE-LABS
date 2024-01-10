@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Ex4
+        </title>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#mybutton').click(()=>{
+                    $(this).val("Stop that!");
+                });
+                $('div').hover(
+                    function () {
+                        $(this).css({"background-color":"red"});
+                    }, 
+                    function () {
+                        $(this).css({"background-color":"blue"});
+                    }
+                );
+            });
+        </script>
+    </head>
+    <body>
+        <div id = "mydiv">
+            Click on this to see a dialogue box.
+           <input type="button" id="mybutton">
+        </div>
+    </body>
+</html>

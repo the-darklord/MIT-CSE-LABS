@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Calc
+        </title>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(()=>{
+                $("#update").click(()=>{
+                    $("#card").css("background-color",
+                        $("#colorS").val()
+                    );
+                    $("#message").css("font-family",
+                        $("#fontS").val()
+                    );
+                    $("#message").html($("#greeting").val());
+                    if($("#double").is(":checked"))
+                    {
+                        $("#card").css("border-style","double");
+                    }
+                    else if($("#solid").is(":checked"))
+                    {
+                        $("#card").css("border-style","solid");
+                    }
+                    else
+                    {
+                        $("#card").css("border-style","none");
+                    }
+                    if(!$("#pic").is(":checked"))
+                    {
+                        $("#image").css("visibility","hidden");
+                    }
+                    else
+                    {
+                        $("#image").css("visibility","visible");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body style="height: 100vh;">
+        <div style="display: flex;background-color: silver;height: 100%;">
+            <div style="width: 50%;">
+                Choose a Color : 
+                <br>
+                <br>
+                <select id="colorS">
+                    <option value="yellow">Yellow</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="orange">Orange</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                Choose a Font :
+                <br>
+                <br>
+                <select id="fontS">
+                    <option value="verdana">Verdana</option>
+                    <option value="arial">Arial</option>
+                    <option value="times">Times</option>
+                    <option value="impact">Impact</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                Choose a Border Style :
+                <br>
+                <br>
+                <input type="radio" name="border" id="none" value="none"> None <br>
+                <input type="radio" name="border" id="double" value="double"> Double <br>
+                <input type="radio" name="border" id="solid" value="solid"> Solid <br>
+                <br>
+                <br>
+                <input type="checkbox" id="pic" value="defaultPic"> Add the Default Picture
+                <br>
+                <br>
+                <p>Enter Greeting Text Below : </p>
+                <textarea id="greeting"></textarea>
+                <br>
+                <br>
+                <input type="button" id="update" value="Update">
+            </div>
+            <div id="card" style="display: grid;justify-content: center;width: 50%;">
+                <h1 id="message"></h1>
+                <img id="image" src="Lord-voldemort.webp" height="200px" width="200px">
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Lab Work
+        </title>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(()=>{
+                $("#anim").click(()=>{
+                    $("#mydiv").animate({
+                        translate:'-250px'
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="mydiv" style="display: flex;float: right;">
+            <div>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>IQ</td>
+                    </tr>
+                    <tr>
+                        <td>Mihir</td>
+                        <td>20</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Jithin</td>
+                        <td>20</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>Shreyash</td>
+                        <td>20</td>
+                        <td>100</td>
+                    </tr>
+                </table>
+                <img src="Lord-voldemort.webp" height="300px">
+            </div>
+        </div>
+        <div>
+            <input type="button" id="anim" value="Move">
+        </div>
+    </body>
+</html>

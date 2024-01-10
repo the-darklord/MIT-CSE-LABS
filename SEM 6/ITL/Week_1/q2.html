@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Calc
+        </title>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(()=>{
+                $(".arithmetic").css("width","36px");
+                $("#add").click(()=>{
+                    var a = parseInt($("#num1").val());
+                    var b = parseInt($("#num2").val());
+                    var res = a+b;
+                    $("#result").html("Result : "+res);
+                });
+                $("#sub").click(()=>{
+                    var a = parseInt($("#num1").val());
+                    var b = parseInt($("#num2").val());
+                    var res = a-b;
+                    $("#result").html("Result : "+res);
+                });
+                $("#mul").click(()=>{
+                    var a = parseInt($("#num1").val());
+                    var b = parseInt($("#num2").val());
+                    var res = a*b;
+                    $("#result").html("Result : "+res);
+                });
+                $("#div").click(()=>{
+                    var a = parseInt($("#num1").val());
+                    var b = parseInt($("#num2").val());
+                    var res = a/b;
+                    $("#result").html("Result : "+res);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        Num 1 : &nbsp;
+        <input type="number" id="num1">
+        <br>
+        <br>
+        Num 2 : &nbsp;
+        <input type="number" id="num2">
+        <br>
+        <br>
+        Operation : &nbsp;
+        <input type="button" value="+" id="add" class="arithmetic">
+        <input type="button" value="-" id="sub" class="arithmetic">
+        <input type="button" value="*" id="mul" class="arithmetic">
+        <input type="button" value="/" id="div" class="arithmetic">
+        <br>
+        <br>
+        <div id="result"></div>
+    </body>
+</html>
