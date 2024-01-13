@@ -16,21 +16,14 @@ int main(int argc,char* argv[])
         MPI_Recv(&x,1,MPI_INT,size-1,1,MPI_COMM_WORLD,&status);
         printf("Received %d in Process %d\n",x,rank);
     }
-    else if(rank==size-1)
-    {
-        MPI_Recv(&x,1,MPI_INT,rank-1,1,MPI_COMM_WORLD,&status);
-        printf("Received %d in process %d\n",x,rank);
-        x++;
-        MPI_Send(&x,1,MPI_INT,0,1,MPI_COMM_WORLD);
-        printf("Sent %d to Process %d\n",x,0);
-    }
     else
     {
+        int t=(rank+1)%size;
         MPI_Recv(&x,1,MPI_INT,rank-1,1,MPI_COMM_WORLD,&status);
         printf("Received %d in process %d\n",x,rank);
         x++;
-        MPI_Send(&x,1,MPI_INT,rank+1,1,MPI_COMM_WORLD);
-        printf("Sent %d to Process %d\n",x,rank+1);
+        MPI_Send(&x,1,MPI_INT,t,1,MPI_COMM_WORLD);
+        printf("Sent %d to Process %d\n",x,t);
     }
     MPI_Finalize();
     return 0;
