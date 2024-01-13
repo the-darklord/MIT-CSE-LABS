@@ -1,8 +1,0 @@
-
-q4:7294 terminated with signal 11 at PC=7f8a4ba47580 SP=7ffdb3757170.  Backtrace:
-/lib/x86_64-linux-gnu/libc.so.6(+0x47580)[0x7f8a4ba47580]
-/lib/x86_64-linux-gnu/libc.so.6(atoi+0x14)[0x7f8a4ba43654]
-./q4(+0x127e)[0x55caba04027e]
-/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7f8a4ba29d90]
-/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7f8a4ba29e40]
-./q4(+0x1185)[0x55caba040185]
