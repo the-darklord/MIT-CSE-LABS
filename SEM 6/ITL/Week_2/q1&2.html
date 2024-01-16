@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Q1&2</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" ></script> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(()=>{
+                $("#create").click(()=>{
+                    var name = $("#name").val();
+                    var uname = $("#uname").val();
+                    var address = $("#address").val();
+                    var email = $("#email").val();
+                    var gender="Others";
+                    if($("#male").is(":checked"))
+                    {
+                        gender = "Male";
+                    }
+                    else if($("#male").is(":checked"))
+                    {
+                        gender = "Female";
+                    }
+                    var branch = $("#branch").val();
+                    var sports="No";
+                    if($("#sports").is(":checked"))
+                    {
+                        sports = "Yes";
+                    }
+                    $("#table").append(
+                        "<tr><td>"+name+"</td><td>"+uname+"</td><td>"+address+"</td><td>"+email+"</td><td>"+gender+"</td><td>"+branch+"</td><td>"+sports+"</td></tr>"           
+                    );
+                    alert("Data Created");
+                });
+                $("#retrieve").click(()=>{
+                    alert("Data Retrieved");
+                });
+                $("#update").click(()=>{
+                    alert("Data Updated");
+                });
+                $("#delete").click(()=>{
+                    $("#table tr:last").remove();
+                    alert("Data Deleted");
+                });
+            });
+        </script>
+    </head>
+    <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+        <div class="d-flex flex-column container justify-content-center align-items-center">
+            <h1>Student Bio Data</h1>
+            <br><br>
+            <form class="row g-3 w-75">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="col-md-6">
+                    <label for="uname" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="uname">
+                </div>
+                <div class="col-md-12">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address">
+                </div>
+                <div class="col-md-12">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <br><br><br><br>
+                <fieldset class="row mb-3 col-md-6">
+                    <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                    <div class="">
+                        <div class="form-check">
+                            <input type="radio" name="gender" id="male" class="form-check-input">
+                            <label for="male" class="form-check-label">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="gender" id="female" class="form-check-input">
+                            <label for="female" class="form-check-label">Female</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="col-md-6">
+                    <label class="form-label" for="branch">Choose Your Branch</label>
+                    <select class="form-select" id="branch">
+                        <option selected>Choose...</option>
+                        <option value="CSE">CSE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="MECH">Mech</option>
+                        <option value="CIVIL">Civil</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-check">
+                        <label clas="form-check-label" for="sports">Want Sports Facilities ?</label>
+                        <input type="checkbox" id="sports" class="form-check-input">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+            <br><br>
+            <div>
+                <button type="button" class="btn btn-success" id="create">Create</button>
+                <button type="button" class="btn btn-secondary" id="retrieve">Retrieve</button>
+                <button type="button" class="btn btn-primary" id="update">Update</button>
+                <button type="button" class="btn btn-danger" id="delete">Delete</button>
+            </div>
+            <br><br>
+            <table class="table table-dark table-striped"> 
+                <thead> 
+                    <tr> 
+                        <th>Name</th> 
+                        <th>Username</th> 
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Branch</th>
+                        <th>Sports Facilities Needed</th>
+                    </tr> 
+                </thead> 
+                <tbody  id="table"> 
+                    
+                </tbody> 
+            </table>
+        </div>
+    </body>
+</html>
