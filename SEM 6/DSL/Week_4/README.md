@@ -2,7 +2,8 @@
 
 ### Try these commands in terminal
 
-$ sudo ufw default allow incoming
-$ suod ufw default allow outgoing
+    $ sudo ufw default allow incoming
+
+    $ sudo ufw default allow outgoing
 
 ### in both the PC's
