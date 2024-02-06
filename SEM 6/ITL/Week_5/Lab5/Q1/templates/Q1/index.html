@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Registration Form</title>
+	<style>
+		/* Styling for labels and input fields */
+		label {
+			font-weight: bold;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="number"],
+		select {
+			width: 100%;
+			padding: 8px;
+			margin-bottom: 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+
+		#detailsTextArea {
+			width: 100%;
+			height: 100px;
+			resize: none;
+		}
+
+		#percentageLabel {
+			font-weight: bold;
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<h2>Student Registration Form</h2>
+	<div id="registrationForm">
+		<label for="firstName">First Name:</label>
+		<input type="text" id="firstName" placeholder="Enter first name">
+
+		<label for="lastName">Last Name:</label>
+		<input type="text" id="lastName" placeholder="Enter last name">
+
+		<!-- Add other fields (Date of Birth, Address, Contact Number, Email ID, Marks) here -->
+		<!-- Example: -->
+		<!-- <label for="dob">Date of Birth:</label>
+		<input type="date" id="dob"> -->
+		<!-- ... -->
+
+		<label for="englishMarks">English Marks:</label>
+		<input type="number" id="englishMarks">
+
+		<label for="physicsMarks">Physics Marks:</label>
+		<input type="number" id="physicsMarks">
+
+		<label for="chemistryMarks">Chemistry Marks:</label>
+		<input type="number" id="chemistryMarks">
+
+		<button onclick="displayDetails()">Submit</button>
+	</div>
+
+	<textarea id="detailsTextArea" readonly></textarea>
+	<label id="percentageLabel"></label>
+
+	<script>
+		function displayDetails() {
+			const englishMarks = parseFloat(document.getElementById("englishMarks").value);
+			const physicsMarks = parseFloat(document.getElementById("physicsMarks").value);
+			const chemistryMarks = parseFloat(document.getElementById("chemistryMarks").value);
+			const totalMarks = englishMarks + physicsMarks + chemistryMarks;
+
+			const detailsTextArea = document.getElementById("detailsTextArea");
+			detailsTextArea.value = `Name: ${document.getElementById("firstName").value} ${document.getElementById("lastName").value}\nEnglish Marks: ${englishMarks}\nPhysics Marks: ${physicsMarks}\nChemistry Marks: ${chemistryMarks}`;
+
+			const percentage = (totalMarks / 300) * 100;
+			const percentageLabel = document.getElementById("percentageLabel");
+			percentageLabel.innerText = `Total Percentage: ${percentage.toFixed(2)}%`;
+		}
+	</script>
+</body>
+</html>
