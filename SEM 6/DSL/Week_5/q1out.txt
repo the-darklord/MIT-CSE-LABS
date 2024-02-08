@@ -1,0 +1,10 @@
+a	4
+ccc	1
+ddd	2
+f	2
+fg	2
+gt	1
+hh	2
+nnn	2
+tg	1
+v	2
