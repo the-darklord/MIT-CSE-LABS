@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Promotion Eligibility</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select,
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+        #resultLabel {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Promotion Eligibility</h1>
+    <form id="promotionForm">
+        <label for="employeeId">Select Employee ID:</label>
+        <select id="employeeId" name="employeeId">
+            <option value="1001">1001</option>
+            <option value="1002">1002</option>
+        </select>
+        <br>
+        <label for="joiningDate">Date of Joining:</label>
+        <input type="date" id="joiningDate" name="joiningDate">
+        <br>
+        <button type="button" onclick="checkEligibility()">Am I Eligible for Promotion</button>
+        <br>
+        <label id="resultLabel"></label>
+    </form>
+
+    <script>
+        function checkEligibility() {
+            const employeeId = document.getElementById("employeeId").value;
+            const joiningDate = new Date(document.getElementById("joiningDate").value);
+            const currentDate = new Date();
+            const yearsOfExperience = currentDate.getFullYear() - joiningDate.getFullYear();
+
+            const resultLabel = document.getElementById("resultLabel");
+            if (yearsOfExperience > 5) {
+                resultLabel.textContent = "YES";
+            } else {
+                resultLabel.textContent = "NO";
+            }
+        }
+    </script>
+</body>
+</html>

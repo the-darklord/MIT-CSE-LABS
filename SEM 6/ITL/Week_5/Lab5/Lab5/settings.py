@@ -34,6 +34,9 @@ INSTALLED_APPS = [
     'Lab5',
     'FormApp',
     'Q1',
+    'Q2',
+    'Q3',
+    'Q4',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,8 +65,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'Q1/templates/Q1'),
-            os.path.join(BASE_DIR,'FormApp/templates/FormApp'),
+            os.path.join(BASE_DIR,'templates'),
             ], 
         'APP_DIRS': True,
         'OPTIONS': {
@@ -116,4 +118,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 STATIC_URL = '/static/'
-STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATIC_ROOT=os.path.join(BASE_DIR,"/static/") 

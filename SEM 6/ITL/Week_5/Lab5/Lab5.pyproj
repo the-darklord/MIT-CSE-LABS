@@ -4,6 +4,7 @@
     <Name>Lab5</Name>
     <RootNamespace>Lab5</RootNamespace>
     <InterpreterId>MSBuild|Lab5-env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -58,22 +59,60 @@
     </Compile>
     <Compile Include="Q1\views.py" />
     <Compile Include="Q1\__init__.py" />
+    <Compile Include="Q2\admin.py" />
+    <Compile Include="Q2\apps.py" />
+    <Compile Include="Q2\migrations\__init__.py" />
+    <Compile Include="Q2\models.py" />
+    <Compile Include="Q2\tests.py" />
+    <Compile Include="Q2\urls.py" />
+    <Compile Include="Q2\views.py" />
+    <Compile Include="Q2\__init__.py" />
+    <Compile Include="Q3\admin.py" />
+    <Compile Include="Q3\apps.py" />
+    <Compile Include="Q3\migrations\__init__.py" />
+    <Compile Include="Q3\models.py" />
+    <Compile Include="Q3\tests.py" />
+    <Compile Include="Q3\urls.py" />
+    <Compile Include="Q3\views.py" />
+    <Compile Include="Q3\__init__.py" />
+    <Compile Include="Q4\admin.py" />
+    <Compile Include="Q4\apps.py" />
+    <Compile Include="Q4\migrations\__init__.py" />
+    <Compile Include="Q4\models.py" />
+    <Compile Include="Q4\tests.py" />
+    <Compile Include="Q4\urls.py" />
+    <Compile Include="Q4\views.py" />
+    <Compile Include="Q4\__init__.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FormApp\templates\FormApp\index.html" />
-    <Content Include="Q1\templates\Q1\index.html" />
+    <Content Include="static\Q4\styles.css" />
+    <Content Include="templates\FormApp\index.html" />
+    <Content Include="templates\Q1\index.html" />
     <Content Include="requirements.txt" />
+    <Content Include="templates\Q2\index.html" />
+    <Content Include="templates\Q3\index.html" />
+    <Content Include="templates\Q4\index.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FormApp\" />
     <Folder Include="FormApp\migrations\" />
-    <Folder Include="FormApp\templates\" />
-    <Folder Include="FormApp\templates\FormApp\" />
+    <Folder Include="static\" />
+    <Folder Include="Q2\" />
+    <Folder Include="Q2\migrations\" />
+    <Folder Include="Q3\" />
+    <Folder Include="Q3\migrations\" />
+    <Folder Include="Q4\" />
+    <Folder Include="Q4\migrations\" />
+    <Folder Include="static\Q4\" />
+    <Folder Include="templates\FormApp\" />
     <Folder Include="Lab5\" />
+    <Folder Include="templates\" />
     <Folder Include="Q1\" />
     <Folder Include="Q1\migrations\" />
-    <Folder Include="Q1\templates\" />
-    <Folder Include="Q1\templates\Q1\" />
+    <Folder Include="templates\Q4\" />
+    <Folder Include="templates\Q3\" />
+    <Folder Include="templates\Q1\" />
+    <Folder Include="templates\Q2\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="Lab5-env\">

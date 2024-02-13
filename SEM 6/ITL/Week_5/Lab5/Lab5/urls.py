@@ -20,6 +20,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.urls import re_path as url
+from django.conf.urls.static import static
+from django.conf import settings
 from . import views 
 
 urlpatterns = [
@@ -27,8 +29,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('FormApp/', include('FormApp.urls')),
     path('Q1/',include('Q1.urls')),
+    path('Q2/',include('Q2.urls')),
+    path('Q3/',include('Q3.urls')),
+    path('Q4/',include('Q4.urls')),
     url(r'^$',views.hello,name='hello'),
     url(r'index/', views.index, name='index'),
     path('',views.Calendar,name='Calendar'),
     url(r'^(?P<year>[0-9]{4})/(?P<month>0?[1-9]|1[0-2])/',views.Calendar,name='Calendar'),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
