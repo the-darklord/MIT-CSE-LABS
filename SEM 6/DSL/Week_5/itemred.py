@@ -1,9 +1,9 @@
-import fileinput
+import sys
 
 transactions_count = 0
 sales_total = 0
 
-for line in fileinput.input():
+for line in sys.stdin:
     data = line.strip().split("\t")
     if len(data) != 2:
         continue
