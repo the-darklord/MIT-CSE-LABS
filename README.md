@@ -29,3 +29,14 @@
    ->     [CNL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%205/CNL)   
    
    ->     [OSL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%205/OSL)
+
+   <br><br>
+
+## SEM 6
+
+   ->    [ITL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%206/ITL)
+
+   ->    [PPL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%206/PPL)
+
+   ->    [DSL](https://github.com/the-darklord/MIT-CSE-LABS/tree/main/SEM%206/DSL)
+   
