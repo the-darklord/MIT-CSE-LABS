@@ -83,19 +83,36 @@
     <Compile Include="Q4\urls.py" />
     <Compile Include="Q4\views.py" />
     <Compile Include="Q4\__init__.py" />
+    <Compile Include="Q5\admin.py" />
+    <Compile Include="Q5\apps.py" />
+    <Compile Include="Q5\migrations\__init__.py" />
+    <Compile Include="Q5\models.py" />
+    <Compile Include="Q5\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Q5\tests.py" />
+    <Compile Include="Q5\views.py" />
+    <Compile Include="Q5\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="static\Q4\styles.css" />
+    <Content Include="static\Q5\OIP.jpg" />
     <Content Include="templates\FormApp\index.html" />
     <Content Include="templates\Q1\index.html" />
     <Content Include="requirements.txt" />
     <Content Include="templates\Q2\index.html" />
     <Content Include="templates\Q3\index.html" />
     <Content Include="templates\Q4\index.html" />
+    <Content Include="templates\Q5\home.html" />
+    <Content Include="templates\Q5\metadata.html" />
+    <Content Include="templates\Q5\publisher.html" />
+    <Content Include="templates\Q5\reviews.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FormApp\" />
     <Folder Include="FormApp\migrations\" />
+    <Folder Include="Q5\" />
+    <Folder Include="Q5\migrations\" />
     <Folder Include="static\" />
     <Folder Include="Q2\" />
     <Folder Include="Q2\migrations\" />
@@ -103,12 +120,14 @@
     <Folder Include="Q3\migrations\" />
     <Folder Include="Q4\" />
     <Folder Include="Q4\migrations\" />
+    <Folder Include="static\Q5\" />
     <Folder Include="static\Q4\" />
     <Folder Include="templates\FormApp\" />
     <Folder Include="Lab5\" />
     <Folder Include="templates\" />
     <Folder Include="Q1\" />
     <Folder Include="Q1\migrations\" />
+    <Folder Include="templates\Q5\" />
     <Folder Include="templates\Q4\" />
     <Folder Include="templates\Q3\" />
     <Folder Include="templates\Q1\" />

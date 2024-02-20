@@ -32,6 +32,7 @@ urlpatterns = [
     path('Q2/',include('Q2.urls')),
     path('Q3/',include('Q3.urls')),
     path('Q4/',include('Q4.urls')),
+    path('Q5/',include('Q5.urls')),
     url(r'^$',views.hello,name='hello'),
     url(r'index/', views.index, name='index'),
     path('',views.Calendar,name='Calendar'),

@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book Information</title>
+</head>
+<body>
+	<nav>
+		<a href="{% url 'home' %}">Home</a>
+		<a href="{% url 'metadata' %}">Metadata</a>
+		<a href="{% url 'reviews' %}">Reviews</a>
+		<a href="{% url 'publisher' %}">Publisher Info</a>
+	</nav>
+	<h1>Book Title</h1>
+	<img src="{% static 'Q5/OIP.jpg' %}" alt="Book Cover">
+</body>
+</html>
