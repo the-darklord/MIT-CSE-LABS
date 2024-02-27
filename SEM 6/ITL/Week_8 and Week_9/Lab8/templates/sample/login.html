@@ -1,0 +1,58 @@
+<!--<html>
+<body>
+    <form name="form" action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <div style="max-width:470px;">
+            <center>
+                <input type="text" style="margin-left:20%;"
+                       placeholder="Identifiant" name="username" />
+            </center>
+        </div>
+        <br>
+        <div style="max-width:470px;">
+            <center>
+                <input type="number" style="margin-left:20%;"
+                       placeholder="contact_number" name="contact_num" />
+            </center>
+        </div>
+        <br>
+        <div style="max-width:470px;">
+            <center>
+
+                <button style="border:0px; background-color:#4285F4; margin-top:8%; height:35px; width:80%;margin-left:19%;" type="submit" value="Login">
+                    <strong>Login</strong>
+                </button>
+
+            </center>
+        </div>
+    </form>
+</body>
+</html>-->
+
+<html>
+    <body>
+
+        <form name="form" action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            <div style="max-width:470px;">
+                <center>
+                    <input type="text" style="margin-left:20%;" placeholder="Identifiant" name="username" />
+                </center>
+            </div>
+            <br>
+            <div style="max-width:470px;">
+                <center>
+                    <input type="password" style="margin-left:20%;" placeholder="password" name="password" />
+                </center>
+            </div>
+            <br>
+            <div style="max-width:470px;">
+                <center>
+                    <button style="border:0px; background-color:#4285F4; margin-top:8%; height:35px; width:80%;margin-left:19%;" type="submit" value="Login">
+                        <strong>Login</strong>
+                    </button>
+                </center>
+            </div>
+        </form>
+    </body>
+</html>  
