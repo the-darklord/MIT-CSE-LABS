@@ -4,6 +4,7 @@
     <Name>Lab8</Name>
     <RootNamespace>Lab8</RootNamespace>
     <InterpreterId>MSBuild|Lab8-env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -51,6 +52,45 @@
     </Compile>
     <Compile Include="Q1\views.py" />
     <Compile Include="Q1\__init__.py" />
+    <Compile Include="Q3\admin.py" />
+    <Compile Include="Q3\apps.py" />
+    <Compile Include="Q3\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Q3\migrations\__init__.py" />
+    <Compile Include="Q3\models.py" />
+    <Compile Include="Q3\tests.py" />
+    <Compile Include="Q3\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Q3\views.py" />
+    <Compile Include="Q3\__init__.py" />
+    <Compile Include="Q4\admin.py" />
+    <Compile Include="Q4\apps.py" />
+    <Compile Include="Q4\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Q4\migrations\__init__.py" />
+    <Compile Include="Q4\models.py" />
+    <Compile Include="Q4\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Q4\tests.py" />
+    <Compile Include="Q4\views.py" />
+    <Compile Include="Q4\__init__.py" />
+    <Compile Include="Q5\admin.py" />
+    <Compile Include="Q5\apps.py" />
+    <Compile Include="Q5\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Q5\migrations\__init__.py" />
+    <Compile Include="Q5\models.py" />
+    <Compile Include="Q5\tests.py" />
+    <Compile Include="Q5\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Q5\views.py" />
+    <Compile Include="Q5\__init__.py" />
     <Compile Include="sample\admin.py" />
     <Compile Include="sample\apps.py" />
     <Compile Include="sample\forms.py">
@@ -66,10 +106,18 @@
     <Compile Include="sample\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Q3\templates\Q3\index.html" />
+    <Content Include="Q4\templates\Q4\index.html" />
+    <Content Include="Q5\templates\Q5\index.html" />
     <Content Include="requirements.txt" />
     <Content Include="templates\home.html" />
     <Content Include="templates\Q1\display.html" />
     <Content Include="templates\Q1\home.html" />
+    <Content Include="templates\Q3\home.html" />
+    <Content Include="templates\Q3\success.html" />
+    <Content Include="templates\Q4\home.html" />
+    <Content Include="templates\Q4\result.html" />
+    <Content Include="templates\Q5\survey.html" />
     <Content Include="templates\sample\home.html" />
     <Content Include="templates\sample\loggedin.html" />
     <Content Include="templates\sample\login.html" />
@@ -78,10 +126,25 @@
     <Folder Include="Lab8\" />
     <Folder Include="Q1\" />
     <Folder Include="Q1\migrations\" />
+    <Folder Include="Q3\" />
+    <Folder Include="Q3\migrations\" />
+    <Folder Include="Q3\templates\" />
+    <Folder Include="Q3\templates\Q3\" />
+    <Folder Include="Q4\" />
+    <Folder Include="Q4\migrations\" />
+    <Folder Include="Q4\templates\" />
+    <Folder Include="Q4\templates\Q4\" />
+    <Folder Include="Q5\" />
+    <Folder Include="Q5\migrations\" />
+    <Folder Include="Q5\templates\" />
+    <Folder Include="Q5\templates\Q5\" />
     <Folder Include="sample\" />
     <Folder Include="sample\migrations\" />
     <Folder Include="templates\" />
     <Folder Include="static\" />
+    <Folder Include="templates\Q5\" />
+    <Folder Include="templates\Q4\" />
+    <Folder Include="templates\Q3\" />
     <Folder Include="templates\Q1\" />
     <Folder Include="templates\sample\" />
   </ItemGroup>

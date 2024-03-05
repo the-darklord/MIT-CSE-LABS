@@ -33,6 +33,9 @@ INSTALLED_APPS = [
     # Add your apps here to enable them
     'sample',
     'Q1',
+    'Q3',
+    'Q4',
+    'Q5',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

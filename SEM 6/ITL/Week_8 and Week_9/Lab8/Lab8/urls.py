@@ -29,6 +29,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('sample/',include('sample.urls')),
     path('Q1/',include('Q1.urls')),
+    path('Q3/',include('Q3.urls')),
+    path('Q4/',include('Q4.urls')),
+    path('Q5/',include('Q5.urls')),
     path('',views.home,name='home'),
     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
