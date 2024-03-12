@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="categories/" method="post">
+        {%csrf_token%}
+        {{cateform.as_p}}
+        <input type="submit" value="Submit">
+    </form>
+    <br> <br>
+    <form action="pages/" method="post">
+        {%csrf_token%}
+        {{pageform.as_p}}
+        <input type="submit" value="Submit">
+    </form>
+    <br> <br>
+    <hr>
+    <h2>Categories</h2>
+    {% for c in categories %}
+    <p>{{c.name}} (Visits : {{c.visits}}) (Likes : {{c.likes}})</p>
+    {% endfor %}
+    <br> <br>
+    <hr>
+    <h2>Pages</h2>
+    {% for p in pages %}
+    <p>{{p.title}} (Views : {{p.views}}) (URL : {{p.url|urlize}})</p>
+    {% endfor %}
+</body>
+</html>
