@@ -1,10 +1,5 @@
 from django import forms
-
-class SurveyForm(forms.Form):
-     choices = (
-          ('Good','Good'),
-          ('Satisfactory','Satisfactory'),
-          ('Bad','Bad'),
-     )
-     res = forms.ChoiceField(widget=forms.RadioSelect(choices=choices))
-
+ 
+class SelectForm(forms.Form):
+	CHOICES = (('good','Good'),('satisfactory','Satisfactory'),('bad','Bad'))
+	res = forms.ChoiceField(widget=forms.RadioSelect(),choices=CHOICES)

@@ -29,6 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('sample/',include('sample.urls')),
     path('Q1/',include('Q1.urls')),
+    path('Q2/',include('Q2.urls')),
     path('Q3/',include('Q3.urls')),
     path('Q4/',include('Q4.urls')),
     path('Q5/',include('Q5.urls')),

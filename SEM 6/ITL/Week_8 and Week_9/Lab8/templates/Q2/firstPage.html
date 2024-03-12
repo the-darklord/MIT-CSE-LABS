@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Page</title>
+</head>
+<body>
+    <h1>First Page</h1>
+    <form action="{% url 'secondPage' %}" method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="roll">Roll:</label>
+        <input type="number" id="roll" name="roll" required>
+        <br>
+        <label for="subjects">Select a Subject:</label>
+        <select id="subjects" name="subjects">
+            <option value="Math">Math</option>
+            <option value="Science">Science</option>
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

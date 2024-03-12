@@ -1,26 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8" />
     <title></title>
 </head>
+
 <body>
-    <form action="{% url 'survey' %}" method="post">
-        {%csrf_token%}
-        How is the book ASP.NET with c# by Vipul Prakashan?
-        <br /><br />
-        <ul>
+
+    <form action="{% url 'survey'%}" method="POST">
+        {% csrf_token %}
+        How is the book ASP.NET with C# by Vipul Prakashan?
+        <br />
+        <ul style="list-style-type:none">
             <li>
-                <input type="radio" name="res" value="Good"> &nbsp;&nbsp;&nbsp;&nbsp; <p>{{pgood}}</p> <br /><br />
+                <input type="radio" name="res" value="good" />Good
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p> {{ pgood }}</p>
+                <br />
             </li>
             <li>
-                <input type="radio" name="res" value="Satisfactory"> &nbsp;&nbsp;&nbsp;&nbsp; <p>{{psat}}</p> <br /><br />
+                <input type="radio" name="res" value="satisfactory" />Satisfactory
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p> {{ psatis }}</p>
+                <br />
             </li>
             <li>
-                <input type="radio" name="res" value="Bad"> &nbsp;&nbsp;&nbsp;&nbsp; <p>{{pbad}}</p> <br /><br />
+                <input type="radio" name="res" value="bad" />Bad
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p> {{ pbad }}</p>
+                <br />
             </li>
         </ul>
-        <input type="submit" value="Vote" />
+
+        <input type="submit" value="Submit">
     </form>
+
 </body>
 </html>

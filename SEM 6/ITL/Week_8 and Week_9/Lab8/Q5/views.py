@@ -1,29 +1,29 @@
-from django.shortcuts import render
-from .forms import SurveyForm
-
-# Create your views here.
-
+import pstats
+from django.shortcuts import render,HttpResponse
+from .forms import SelectForm
+ 
 def survey(request):
-    pgood = 1
-    psat = 1
-    pbad = 1
-    if request.method=="GET":
-        return render(request,'Q5/survey.html')
-    elif request.method=="POST":
-        form = SurveyForm(request.POST)
-        if form.is_valid():
-            res = request.POST['res']
-            if res=='Good':
-                pgood += 1
-            elif res=='Satisfactory':
-                psat += 1
-            else:
-                pbad += 1
-    else:
-        form = SurveyForm()
-    
-    pgood = pgood*100/4
-    psat = psat*100/4
-    pbad = pbad*100/4
-            
-    return render(request,'Q5/survey.html',{'pgood':pgood,'psat':psat,'pbad':pbad})
+	if request.method == "GET":
+		return render(request,'Q5/survey.html')
+	elif request.method == "POST":
+		pgood = 1
+		psatis = 1
+		pbad = 1
+ 
+		formres = SelectForm(request.POST)
+		if formres.is_valid():
+			res = formres.cleaned_data['res']
+			if(res == "good"):
+				pgood += 1
+			elif(res == "satisfactory"):
+				psatis += 1
+			else:
+				pbad += 1
+		else:
+			return HttpResponse("Invalid Form")
+ 
+		pgood = (pgood/4)* 100
+		psatis = (psatis/4)* 100
+		pbad = (pbad/4)* 100
+		context = {"pgood":pgood,"psatis":psatis,"pbad":pbad}
+		return render(request,'Q5/survey.html',context)

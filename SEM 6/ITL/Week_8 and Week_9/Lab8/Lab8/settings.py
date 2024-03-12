@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     # Add your apps here to enable them
     'sample',
     'Q1',
+    'Q2',
     'Q3',
     'Q4',
     'Q5',

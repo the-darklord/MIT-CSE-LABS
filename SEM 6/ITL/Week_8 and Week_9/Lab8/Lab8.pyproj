@@ -52,6 +52,19 @@
     </Compile>
     <Compile Include="Q1\views.py" />
     <Compile Include="Q1\__init__.py" />
+    <Compile Include="Q2\admin.py" />
+    <Compile Include="Q2\apps.py" />
+    <Compile Include="Q2\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Q2\migrations\__init__.py" />
+    <Compile Include="Q2\models.py" />
+    <Compile Include="Q2\tests.py" />
+    <Compile Include="Q2\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Q2\views.py" />
+    <Compile Include="Q2\__init__.py" />
     <Compile Include="Q3\admin.py" />
     <Compile Include="Q3\apps.py" />
     <Compile Include="Q3\forms.py">
@@ -106,6 +119,7 @@
     <Compile Include="sample\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Q2\templates\Q2\index.html" />
     <Content Include="Q3\templates\Q3\index.html" />
     <Content Include="Q4\templates\Q4\index.html" />
     <Content Include="Q5\templates\Q5\index.html" />
@@ -113,6 +127,8 @@
     <Content Include="templates\home.html" />
     <Content Include="templates\Q1\display.html" />
     <Content Include="templates\Q1\home.html" />
+    <Content Include="templates\Q2\firstPage.html" />
+    <Content Include="templates\Q2\secondPage.html" />
     <Content Include="templates\Q3\home.html" />
     <Content Include="templates\Q3\success.html" />
     <Content Include="templates\Q4\home.html" />
@@ -126,6 +142,10 @@
     <Folder Include="Lab8\" />
     <Folder Include="Q1\" />
     <Folder Include="Q1\migrations\" />
+    <Folder Include="Q2\" />
+    <Folder Include="Q2\migrations\" />
+    <Folder Include="Q2\templates\" />
+    <Folder Include="Q2\templates\Q2\" />
     <Folder Include="Q3\" />
     <Folder Include="Q3\migrations\" />
     <Folder Include="Q3\templates\" />
@@ -142,6 +162,7 @@
     <Folder Include="sample\migrations\" />
     <Folder Include="templates\" />
     <Folder Include="static\" />
+    <Folder Include="templates\Q2\" />
     <Folder Include="templates\Q5\" />
     <Folder Include="templates\Q4\" />
     <Folder Include="templates\Q3\" />
